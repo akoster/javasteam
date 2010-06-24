@@ -1,7 +1,6 @@
 #summary Overview of JavaSteam materials and sessions
 
 =Books=
-
     * Head first Java 2nd edition, Kathy Sierra & Bert Bates, February 2005, O’Reilly
     * SCJP Sun Certified Programmer for Java 5 Study Guide (Exam 310-055), Kathy Sierra & Bert Bates, McGraw-Hill/Osborne
 
@@ -12,7 +11,6 @@
     * Build: Maven2 (http://maven.apache.org/download.html)
 
 =Session 1=
-
     * reading
         * SCJP ch. 10 ‘Development’ behalve 7.1 (static imports)
         * HFJ ch. 1 ‘Quick dip’ (p.1 - 26)
@@ -21,8 +19,8 @@
         * Nieuw Eclipse project maken met mvn archetype:generate
         * Hello world Java applicatie maken en inchecken
         * Project inchecken in Subversion (https://javasteam.googlecode.com/svn/trunk/)
-=Session 2=
 
+=Session 2=
     * reading
         * SCJP ch. 1 & 2 skimmen
         * HFJ ch. 5 
@@ -31,36 +29,16 @@
         * Gebruik van issue tracker (bijv. Bugzilla)
         * Test driven developement: Unit- en integratie testen met JUnit
 
+=Session 3=
+    * reading
+        * SCJP ch. 3 & 4 (p. 173 - 314)
+        * HFJ ch. 5 (p. 95 - 123)
+    * practical
+        * Uitgebreide DotCom game maken
+        * Object orientatie: gebruik van interfaces
+        * Logging met Log4j
 
-
-Lezen
-
-    * SCJP ch. 3 & 4 (p. 173 - 314)
-    * HFJ ch. 5 (p. 95 - 123)
-
-
-
-Sessie 3
-
-    * Uitgebreide DotCom game maken
-    * Object orientatie: gebruik van interfaces
-    * Logging met Log4j
-
-
-
-Lezen
-
-    * SCJP ch. 5 (p.)
-    * HFJ ch. 5 (p. 95 - 123)
-
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=Session 4=
+    * reading
+        * SCJP ch. 5 (p.)
+        * HFJ ch. 5 (p. 95 - 123)
