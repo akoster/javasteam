@@ -1,1 +1,3 @@
 http://www.germane-software.com/~ser/R_n_R/subversion.html#N61
+
+http://semver.org/
