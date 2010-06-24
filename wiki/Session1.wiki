@@ -21,7 +21,7 @@ Install Maven 2.2.1 and created project
     * Open DOS box in Eclipse workspace directory
     * execute: mvn archetype:generate
     * Select maven-quickstart archetype and answer questions, this generates a simple project structure
-    * execute: mvn eclipse:eclipse, this generates Eclipse settings (.project & .classpath)
+    * execute: mvn eclipse:eclipse(switch to new generated directory in the workspace directory), this generates Eclipse settings (.project & .classpath)
     * import project into Eclipse: import -> Project -> browse to root directory
     * Configure build path -> Add variable M2_REPO = [YOUR_HOME_DIR]\.m2\repository. This is needed to tell Eclipse where to find the dependencies managed by maven
 
