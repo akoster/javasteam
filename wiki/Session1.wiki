@@ -1,10 +1,10 @@
 #summary Session1 summary
 
-Installed java 6 JDK
+Install java 6 JDK
 
-Installed Eclipse Galileo (3.5)
+Install Eclipse Galileo (3.5)
 
-Installed Subclipse plugin
+Install Subclipse plugin
     * in Help -> Install new software
     * Add site Subclipse 1.6 - http://subclipse.tigris.org/update_1.6.x
     * Select subclipse module and accept all defaults
@@ -15,7 +15,7 @@ JavaSteam google code project
     * Generate googlecode password for user on Source -> Checkout tab
     * Add repository https://javasteam.googlecode.com/svn (refers to JavaSteam Google code project)
 
-Installed Maven 2.2.1 and created project
+Install Maven 2.2.1 and created project
     * Add system environment variabel MAVEN_HOME pointing to maven install directory
     * Add %MAVEN_HOME%\bin to system path
     * Open DOS box in Eclipse workspace directory
@@ -24,3 +24,16 @@ Installed Maven 2.2.1 and created project
     * execute: mvn eclipse:eclipse, this generates Eclipse settings (.project & .classpath)
     * import project into Eclipse: import -> Project -> browse to root directory
     * Configure build path -> Add variable M2_REPO = [YOUR_HOME_DIR]\.m2\repository. This is needed to tell Eclipse where to find the dependencies managed by maven
+
+Check project into Subversion
+    * project -> Team -> Share project
+    * Choose SVN (not CVS)
+    * Choose our google code repository
+    * Choose project name as directory name (javasteam)
+    * Eclipse switches to Team synchronization perspective
+    * Remove from view: target, .project and .classpath (these are Eclipse specific/generated file which we don't want in our code repository)
+    * Commit and enter a comment
+    * Switch to Java perspective
+    * svn:ignore the three files not committed above 
+    * Commit the svn:ignore (this is a Subversion property on a directory)
+    
