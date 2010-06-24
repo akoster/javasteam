@@ -1,0 +1,18 @@
+#summary Session1 summary
+
+Installed java 6 JDK
+
+Installed Eclipse Galileo (3.5)
+
+Installed Subclipse plugin
+    * in Help -> Install new software
+    * Add site Subclipse 1.6 - http://subclipse.tigris.org/update_1.6.x
+    * Select subclipse module and accept all defaults
+    * Go to SVN repository exploring perspective
+
+JavaSteam google code project
+    * Add user to project on http://code.google.com/p/javasteam/
+    * Generate googlecode password for user on Source -> Checkout tab
+    * Add repository https://javasteam.googlecode.com/svn (refers to JavaSteam Google code project)
+
+
