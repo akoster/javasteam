@@ -1,33 +1,30 @@
 package nl.seetickets;
+import java.util.ArrayList;
 
 public class SimpleDotCom {
 
-	int[] locationCells;
+	private ArrayList<String> locationCells;
 	int numOfHits = 0;
 	
-	public String checkYourself(String userGuess){
+	public String checkYourself(String userInput){
 		
-		String result = "missed";
+		String result = "miss";
+		int index = locationCells.indexOf(userInput);
 		
-		int guess = Integer.parseInt(userGuess);
-		
-		for (int cell:locationCells) {
-			if(cell == guess){
-				numOfHits++;
+		if (index >= 0) {
+			
+			locationCells.remove(index);
+			
+			if(locationCells.isEmpty()){
+				result = "kill";
+			} else {
 				result = "hit";
-				break;
 			}
 		}
-		
-		if(numOfHits == 3){
-			result = "kill";
-		}
-		
-		System.out.println(result);
 		return result;
 	}
 	
-	public void setLocationCells(int[] loc){
+	public void setLocationCells(ArrayList<String> loc){
 		locationCells = loc;
 	}
 	
