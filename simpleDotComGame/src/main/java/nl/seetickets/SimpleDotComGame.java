@@ -1,5 +1,7 @@
 package nl.seetickets;
 
+import java.util.ArrayList;
+
 
 public class SimpleDotComGame {
 
@@ -13,8 +15,11 @@ public class SimpleDotComGame {
 		
 		SimpleDotCom dot = new SimpleDotCom();
 		
-		int randomNumber = (int)(Math.random() * 5);		
-		int[] loc = {randomNumber, randomNumber + 1, randomNumber + 2};
+		int randomNumber = (int)(Math.random() * 5);
+		ArrayList<String> loc = new ArrayList<String>();
+		loc.add(String.valueOf(randomNumber));
+		loc.add(String.valueOf(randomNumber + 1));
+		loc.add(String.valueOf(randomNumber + 2));
 		
 		dot.setLocationCells(loc);
 		boolean isAlive = true;
@@ -22,6 +27,9 @@ public class SimpleDotComGame {
 		while (isAlive) {
 			String guess = helper.getUserInput("Enter a number");
 			String result = dot.checkYourself(guess);
+			
+			System.out.println(result);
+			
 			numOfGuesses++;
 			if(result.equals("kill")){
 				isAlive = false;
