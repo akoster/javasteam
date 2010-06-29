@@ -1,0 +1,18 @@
+Klasse diagram voor een autoverhuurbedrijf
+
+Auto
+Laadvermogen
+Verschillende huurprijs per dag
+Verschillend soort rijbewijs
+
+Klant
+Rijbewijs
+Naam
+
+Contract(koppeling tussen een auto en een klant voor een bepaalde periode)
+Beschikbaarheid
+
+Use case
+Op een bepaalde dag bekijken of een voertuig beschikbaar is
+Nieuwe klant invoeren
+Nieuw contract invoeren
