@@ -1,27 +1,25 @@
-= Maak een klasse diagram voor een autoverhuurbedrijf=
+#summary Maak een klasse diagram voor een autoverhuurbedrijf
 
-==Entiteiten==
+*Entiteiten*
 
-*Auto*
+Auto
   * Laadvermogen
   * Verschillende huurprijs per dag
   * Verschillend soort rijbewijs
 
-*Klant*
+Klant
   * Rijbewijs
   * Naam
 
-*Contract*
+Contract
   * auto
   * klant
   * periode
 
-==Use cases==
+*Use cases*
 
-*Nieuwe klant invoeren* 
+Nieuwe klant invoeren
 
-*Controleren of een voertuig beschikbaar is voor een bepaalde datum*
+Controleren of een voertuig beschikbaar is voor een bepaalde datum
 
-*Nieuw contract invoeren*
-
-
+Nieuw contract invoeren
