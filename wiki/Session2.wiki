@@ -13,9 +13,9 @@ Java through commandline
 Jar through commandline
   * The jar tool is part of the JDK and allows you to bundle java classes for easy deployment and versioning. 
   * To create a jarfile of nl.javasteam.helloworld.App, type:
-    jar cvf hello.jar nl\javasteam\helloworld\*.class
+    jar cvf hello.jar nl\javasteam\helloworld\'*'.class
   * To make the jarfile easily executable, add an entrypoint:
-    jar cvfe hello.jar nl.javasteam.helloworld.App nl\javasteam\helloworld\*.class
+    jar cvfe hello.jar nl.javasteam.helloworld.App nl\javasteam\helloworld\'*'.class
   You can then execute this jarfile by typing:
     java -jar hello.jar
 
