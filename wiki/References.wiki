@@ -8,6 +8,6 @@ Compiling and running Java programs
   http://www.cs.swarthmore.edu/~newhall/unixhelp/debuggingtips_Java.html
 
 Automated testing tools
-  webservice : soapUI (http://www.eviware.com/)
-  GUI : Selenium (http://seleniumhq.org/)
-  database : DbUnit? (see also http://www.agiledata.org/essays/databaseTesting.html)
+  *webservice : soapUI (http://www.eviware.com/)
+  *GUI : Selenium (http://seleniumhq.org/)
+  *database : DbUnit? (see also http://www.agiledata.org/essays/databaseTesting.html)
