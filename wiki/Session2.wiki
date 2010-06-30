@@ -5,22 +5,30 @@ Java through commandline
   * each top-level class is represented by a separate file which is stored in a folder within a source folder, matching the java package namespace (for example 'nl\javasteam\helloworld\App.java' within 'src\main\java').
   * The combined package + classname is called the fully qualified classname, for example 'nl.javasteam.helloworld.App'
   * to compile App.java from the commandline, go to the source folder and type: 
-    javac nl\javasteam\helloworld\App.java (the path to the source file)
+    {{{javac nl\javasteam\helloworld\App.java}}} (the path to the source file)
   This creates the file 'nl\javasteam\helloworld\App.class'
   * to run it type: 
-    java -cp . nl.javasteam.helloworld.App  (the fully qualified classname) 
+    {{{java -cp . nl.javasteam.helloworld.App}}}  (the fully qualified classname) 
 
 Jar through commandline
-  * The jar tool is part of the JDK and allows you to bundle java classes for easy deployment and versioning. 
-  * To create a jarfile of nl.javasteam.helloworld.App, type:
-    {{{jar cvf hello.jar nl\javasteam\helloworld\*.class}}}
-  * To make the jarfile easily executable, add an entrypoint:
-    {{{jar cvfe hello.jar nl.javasteam.helloworld.App nl\javasteam\helloworld\'*'.class}}}
+  * The jar tool is part of the JDK and allows you to bundle java classes for easy deployment, versioning etc.
+  * To create a jarfile of all files in nl.javasteam.helloworld, type:
+    {{{jar cvf hello.jar nl\javasteam\helloworld\}}}
+  * To make the jarfile executable, add an entrypoint:
+    {{{jar cvfe hello.jar nl.javasteam.helloworld.App nl\javasteam\helloworld\}}}
   You can then execute this jarfile by typing:
     {{{java -jar hello.jar}}}
 
 JUnit
-   *
+  * JUnit is a java library (yes, a .jar file!) which offers support for automated testing. An automated test can be either a unit test which tests one isolated class, or an integration test, which tests several classes and/or depends on complex systems like a database, file system, web service, graphical user interface, the Internet, etc. Both type of tests (unit and integration) can be created using JUnit, although for many cases specialized tools are a better solution:
+    * webservice : soapUI (http://www.eviware.com/)
+    * GUI : Selenium (http://seleniumhq.org/)
+    * database : DbUnit (see also http://www.agiledata.org/essays/databaseTesting.html)
+JUnit is not very useful for testing concurrent (multi-threaded) code. TestNG has some support for it, but it remains hard to test such code.
 
 Issue tracker
-   *
+  * Google code offers a reasonable issue tracker which we will use
+  * Issues are entered and assigned to a person (the owner).
+  * The owner has the responsibility to ultimately 'do something' with the issue, which might be reassigning it to somebody else, marking it invalid, postponing it to a later release or even fixing it.
+  * Issues can have a type, status, milestone and priority and other labels. Common ones are the product/component in which the issue occurs, the impact of the issue (show-stopper or minor layout glitch) and dependencies between issues. 
+  * There are many issue tracking systems like Bugzilla, JIRA and Mantis which all have their own approach and a slight tendency to become overly complicated.
