@@ -1,1 +1,10 @@
 #Session2 summary
+
+Java through commandline
+   * 
+
+Jar through commandline
+   *
+
+JUnit
+   *
