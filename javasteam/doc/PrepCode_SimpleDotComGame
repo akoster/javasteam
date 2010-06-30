@@ -1,0 +1,22 @@
+Prepcode simple dot com game
+
+METHOD public static void main(String[] args)
+	DECLARE an int variable to hold the number of user guesses, named numOfGuesses
+	MAKE an new instance of the SimpleDotComGame
+	
+	COMPUTE a random number between 0 and 4 that will be the starting location cell position
+	DECLARE an int array for the location cells
+	INVOKE the setLocationCells() method on the SimpleDotCom instance
+	DECLARE a boolean variable representing the state of the game named isAlive, SET it to true
+	
+	WHILE the dot com is still alive:
+		GET user input from the command line
+		INVOKE the checkYourself() method on the SimpleDotCom instance
+		INCREMENT numOfGuess variable
+		// CHECK for dot com death
+		IF result is kill
+		 	isAlive is FALSE
+		 	PRINT the number of guesses
+		END IF
+	END WHILE
+		
