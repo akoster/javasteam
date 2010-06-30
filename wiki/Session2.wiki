@@ -1,7 +1,13 @@
-#Session2 summary
+#summary Session2 summary
 
 Java through commandline
-   * 
+  * source code resides under a source directory, i.e. 'src/main/java' or 'src/test/java' in a normal Maven project.
+  * each top-level class is represented by a separate file ('App.java') which is stored in a directory matching the java package namespace ('nl\javasteam\helloworld').
+  * package + classname is called the fully qualified classname. For example 'nl.javasteam.helloworld.App'
+  * to compile App.java from the source directory type: 
+    javac nl\javasteam\helloworld\App.java
+  This creates the file 'nl\javasteam\helloworld\App.class'
+  * to run it type: java -cp . nl.javasteam.helloworld.App 
 
 Jar through commandline
    *
