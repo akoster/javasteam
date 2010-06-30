@@ -1,16 +1,16 @@
 #summary Session2 summary
 
 Java through commandline
-  * source code resides under a source directory, i.e. 'src/main/java' or 'src/test/java' in a normal Maven project.
-  * each top-level class is represented by a separate file ('App.java') which is stored in a directory matching the java package namespace ('nl\javasteam\helloworld').
-  * package + classname is called the fully qualified classname. For example 'nl.javasteam.helloworld.App'
-  * to compile App.java from the source directory type: 
-    javac nl\javasteam\helloworld\App.java
+  * source code resides under a source folder, for example 'src\main\java' is the main source folder in a normal Maven project.
+  * each top-level class is represented by a separate file which is stored in a folder within a source folder, matching the java package namespace (for example 'nl\javasteam\helloworld\App.java' within 'src\main\java').
+  * The combined package + classname is called the fully qualified classname, for example 'nl.javasteam.helloworld.App'
+  * to compile App.java from the commandline, go to the source folder and type: 
+    javac nl\javasteam\helloworld\App.java (the path to the source file)
   This creates the file 'nl\javasteam\helloworld\App.class'
-  * to run it type: java -cp . nl.javasteam.helloworld.App 
-
+  * to run it type: java -cp . nl.javasteam.helloworld.App  (the fully qualified classname)
+  
 Jar through commandline
-   *
+   * The jar tool is part of the JDK and allows you to bundle java classes for easy deployment and versioning. 
 
 JUnit
    *
