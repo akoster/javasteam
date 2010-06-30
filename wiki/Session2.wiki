@@ -7,10 +7,17 @@ Java through commandline
   * to compile App.java from the commandline, go to the source folder and type: 
     javac nl\javasteam\helloworld\App.java (the path to the source file)
   This creates the file 'nl\javasteam\helloworld\App.class'
-  * to run it type: java -cp . nl.javasteam.helloworld.App  (the fully qualified classname)
-  
+  * to run it type: 
+    java -cp . nl.javasteam.helloworld.App  (the fully qualified classname) 
+
 Jar through commandline
-   * The jar tool is part of the JDK and allows you to bundle java classes for easy deployment and versioning. 
+  * The jar tool is part of the JDK and allows you to bundle java classes for easy deployment and versioning. 
+  * To create a jarfile of nl.javasteam.helloworld.App, type:
+    jar cvf hello.jar nl\javasteam\helloworld\*.class
+  * To make the jarfile easily executable, add an entrypoint:
+    jar cvfe hello.jar nl.javasteam.helloworld.App nl\javasteam\helloworld\*.class
+  You can then execute this jarfile by typing:
+    java -jar hello.jar
 
 JUnit
    *
