@@ -1,4 +1,4 @@
-package nl.seetickets.javasteam.helloworld;
+package nl.javasteam.helloworld;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
