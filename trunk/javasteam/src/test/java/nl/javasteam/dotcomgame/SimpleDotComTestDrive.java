@@ -1,6 +1,8 @@
-package nl.seetickets.javasteam.dotcomgame;
+package nl.javasteam.dotcomgame;
 
 import java.util.ArrayList;
+
+import nl.javasteam.dotcomgame.SimpleDotCom;
 
 public class SimpleDotComTestDrive {
 

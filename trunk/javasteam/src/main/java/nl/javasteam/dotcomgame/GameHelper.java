@@ -1,4 +1,4 @@
-package nl.seetickets.javasteam.dotcomgame;
+package nl.javasteam.dotcomgame;
 
 import java.io.BufferedReader;
 import java.io.IOException;
