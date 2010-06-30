@@ -1,0 +1,34 @@
+Prep code simple dot com game
+
+DECLARE an int array to hold the location cells. Call it locationCells.
+DECLARE an int to hold the number of hits. Call it numOfHits and SET it to 0.
+
+DECLARE a checkYourself() method that takes a String for the user's guess("1","2", etc),
+checks it, and returns a result represeenting a "hit", "miss", or "kill".
+
+DECLARE a setLocationCells() setter method that takes an int array(wich have the three cell locations as ints(2,3,4 etc).
+
+METHOD checkYourself(String userGuess)
+	GET the user guess as a String parameter
+	CONVERT the user guess to an int
+	
+	REPEAT witch each of the location cells in the int array
+		COMPARE the user guess with the location cell
+		IF the user guess matches
+			INCREMENT the number of hits
+			FIND OUT if it was the last location cell
+			IF number of hits is 3, RETURN "kill" as the result
+			ELSE it was not a kill, RETURN "hit"
+			END IF
+		ELSE the user guess did not match, RETURN "miss"
+		END IF
+	END REPEAT
+END METHOD
+
+METHOD setLocationCells(int[] cellLocations
+	GET the location as an int Array parameter
+	ASSIGN the cell locations to the cell location instance variable
+END METHOD
+			
+			
+			

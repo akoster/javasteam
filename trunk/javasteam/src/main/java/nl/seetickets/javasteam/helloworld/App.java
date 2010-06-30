@@ -1,4 +1,4 @@
-package nl.seetickets;
+package nl.seetickets.javasteam.helloworld;
 
 /**
  * Hello world!
