@@ -32,14 +32,15 @@
 =Session 3=
     * reading
         * SCJP ch. 3 & 4 (p. 173 - 314)
-        * HFJ ch. 5 (p. 95 - 123)
+        * HFJ ch. 6
     * practical
-        * Maak een klasse diagram voor de AutoVerhuur case
-        * Uitgebreide DotCom game maken
+        * Uitgebreide DotCom game afmaken
+        * Maak een klasse diagram voor de AutoVerhuur case        
         * Object orientatie: gebruik van interfaces
         * Logging met Log4j
 
 =Session 4=
-    * reading
-        * SCJP ch. 5 (p.)
-        * HFJ ch. 5 (p. 95 - 123)
+
+=Session 5=
+
+=Session 6=
