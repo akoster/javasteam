@@ -1,0 +1,12 @@
+Prepcode DotComGame
+
+Een instance van de DotComGame
+Een userinput helper class voor het krijgen van de user input
+
+Aanroepen van een methode die een resultaat teruggeeft(user input meegeven).
+
+Een routine die aan de hand van het resultaat bekijkt of het spel beeindigt moet worden
+	Als het spel beeindigt moet worden
+		Spel beeindigen
+		Rating tonen
+ 
