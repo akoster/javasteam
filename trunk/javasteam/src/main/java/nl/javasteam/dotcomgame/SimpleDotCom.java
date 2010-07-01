@@ -1,11 +1,10 @@
 package nl.javasteam.dotcomgame;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class SimpleDotCom {
 
-	private ArrayList<String> locationCells;
-	int numOfHits = 0;
+	private List<String> locationCells;
 
 	public String checkYourself(String userInput) {
 
@@ -25,8 +24,13 @@ public class SimpleDotCom {
 		return result;
 	}
 
-	public void setLocationCells(ArrayList<String> loc) {
+	public void setLocationCells(List<String> loc) {
 		locationCells = loc;
+	}
+
+	public boolean isValid(String userName) {
+		// throw new NotImplementedException();
+		return ("Martijn".equals(userName));
 	}
 
 }
