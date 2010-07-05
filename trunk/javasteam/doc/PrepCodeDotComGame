@@ -1,11 +1,16 @@
 Prepcode DotComGame
 
 MAKE an instance of the DotComGame
+MAKE an instance of the GameHelperDotCom
+CREATE an Object ArrayList to hold the three dot.com objects
 CREATE an int to hold the number of guesses
-CREATE an String ArrayList to hold the three dot.com names
-CREATE three int ArrayLists to hold the three dot.com location cells
-CREATE something to capture the user input
 
+CREATE the MAIN method
+
+CREATE three dot.com objects and put them in the ArrayList
+Capture the user input
+
+CREATE a METHOD to setup the game
 CREATE a METHOD to start the game
 CREATE a METHOD to check the user guess, and return a result("hit", "miss", "kill")
 CREATE a method to end the game and print the rating
