@@ -1,8 +1,9 @@
-package nl.javasteam.helloworld;
+package test.java.nl.javasteam.helloworld;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+
 
 /**
  * Unit test for simple App.
