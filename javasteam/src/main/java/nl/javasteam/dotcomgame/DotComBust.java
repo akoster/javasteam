@@ -18,9 +18,12 @@ public class DotComBust {
 	
 	private void setUpGame() {
 		DotCom one = new DotCom();
+		one.setName("Pets.com");
 		DotCom two = new DotCom();
+		two.setName("eToys.com");
 		DotCom three = new DotCom();
-		
+		three.setName("Go2.com");
+				
 		dotComList.add(one);
 		dotComList.add(two);
 		dotComList.add(three);
