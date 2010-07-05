@@ -1,12 +1,12 @@
 Prepcode DotComGame
 
-Een instance van de DotComGame
-Een userinput helper class voor het krijgen van de user input
+MAKE an instance of the DotComGame
+CREATE an int array to hold the number of guesses
+CREATE an String ArrayList to hold the three dot.com names
+CREATE three int ArrayLists to hold the three dot.com location cells
+CREATE something to capture the user input
 
-Aanroepen van een methode die een resultaat teruggeeft(user input meegeven).
-
-Een routine die aan de hand van het resultaat bekijkt of het spel beeindigt moet worden
-	Als het spel beeindigt moet worden
-		Spel beeindigen
-		Rating tonen
+CREATE a METHOD to start the game
+CREATE a METHOD to check the user guess, and return a result("hit", "miss", "kill")
+CREATE a method to end the game and print the rating
  
