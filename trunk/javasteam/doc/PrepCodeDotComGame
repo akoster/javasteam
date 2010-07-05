@@ -1,7 +1,7 @@
 Prepcode DotComGame
 
 MAKE an instance of the DotComGame
-CREATE an int array to hold the number of guesses
+CREATE an int to hold the number of guesses
 CREATE an String ArrayList to hold the three dot.com names
 CREATE three int ArrayLists to hold the three dot.com location cells
 CREATE something to capture the user input
