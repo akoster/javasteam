@@ -1,16 +1,15 @@
-package nl.javasteam.dotcomgame;
+package test.java.nl.javasteam.dotcomgame;
+
 
 import java.util.ArrayList;
-
-import nl.javasteam.dotcomgame.SimpleDotCom;
+import main.java.nl.javasteam.dotcomgame.SimpleDotCom;
 
 public class SimpleDotComTestDrive {
-
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		
 		SimpleDotCom dot = new SimpleDotCom();
 		ArrayList<String> locations = new ArrayList<String>();
 		locations.add("2");
