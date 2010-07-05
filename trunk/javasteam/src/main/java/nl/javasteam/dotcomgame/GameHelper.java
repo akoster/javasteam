@@ -1,4 +1,4 @@
-package nl.javasteam.dotcomgame;
+package main.java.nl.javasteam.dotcomgame;
 
 import java.io.BufferedReader;
 import java.io.IOException;
