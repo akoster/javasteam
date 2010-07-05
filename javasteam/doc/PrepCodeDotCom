@@ -1,1 +1,17 @@
 PrepCode DotCom
+
+CREATE a String ArrayList for the location cells
+CREATE a String for the dotCom name
+CREATE a result boolean and set it to false
+
+DECLARE a String checkYourSelf() method that takes a String for the userinput, checks it and returns a result
+DECLARE a setLocationsCells() setter method that takes a String ArrayList as input
+
+METHOD checkYourSelf
+	CHECK if the userInput is in the String ArrayList for the location cells
+	IF true
+		Remove it from the ArrayList
+	ELSE
+		return miss
+		
+ 
