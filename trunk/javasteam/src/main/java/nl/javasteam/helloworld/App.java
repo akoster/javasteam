@@ -1,4 +1,4 @@
-package nl.javasteam.helloworld;
+package main.java.nl.javasteam.helloworld;
 
 /**
  * Hello world!
