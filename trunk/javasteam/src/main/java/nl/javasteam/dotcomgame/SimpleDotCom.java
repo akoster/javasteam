@@ -1,4 +1,4 @@
-package main.java.nl.javasteam.dotcomgame;
+package nl.javasteam.dotcomgame;
 
 import java.util.List;
 

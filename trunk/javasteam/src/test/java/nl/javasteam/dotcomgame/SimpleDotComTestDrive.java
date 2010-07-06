@@ -1,8 +1,8 @@
-package test.java.nl.javasteam.dotcomgame;
+package nl.javasteam.dotcomgame;
 
 
 import java.util.ArrayList;
-import main.java.nl.javasteam.dotcomgame.SimpleDotCom;
+import nl.javasteam.dotcomgame.SimpleDotCom;
 
 public class SimpleDotComTestDrive {
 	/**
