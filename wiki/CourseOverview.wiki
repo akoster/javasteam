@@ -31,15 +31,26 @@
 
 =Session 3=
     * reading
-        * SCJP ch. 3 & 4 (p. 173 - 314)
         * HFJ ch. 6
     * practical
         * Uitgebreide DotCom game afmaken
         * Maak een klasse diagram voor de AutoVerhuur case        
-        * Object orientatie: gebruik van interfaces
-        * Logging met Log4j
-
+        * Unit testing continued, black/white box, code coverage, mocking
+        
 =Session 4=
+    * reading
+        * SCJP ch. 3 & 4 (p. 173 - 314)
+        * Browse http://www.javacamp.org/designPattern/
+    * practical
+        * TODO AKO: find out how to mock InputStream
+        * TODO AKO: extend CarRental requirements
+        * TODO AKO: deliver a working data service for CarRental
+        * flesh out class diagram of CarRental
+        * Create classes and JavaDoc matching the class diagram
+        * Apply design patterns where useful (see javacamp site)
+        * Logging with Log4j (add maven depdenceny in pom)
+    
+
 
 =Session 5=
 
