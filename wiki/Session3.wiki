@@ -2,7 +2,7 @@
 
 How to make an executable jar? 
 
-To specify the source directory use -C [sourcedir] .
+To specify the source directory use -C sourcedir .
 
 You can run a jar with java -jar if you add the entrypoint in the manifest (see Session1)
 TODO AKO: find out how to make a jar which starts after double-cliking it (like violet UML)
@@ -20,5 +20,3 @@ Both approaches are useful and should be used where applicable.
 A tool for aiding white box testing is EclEmma (or Cobertura is an alternative). The EclEmma Eclipse plugin allows you to 'coverage' a Java run or JUnit test run and shows all covered lines of code green, uncovered lines red, and partially covered lines yellow. It also generates a pane with a coverage report, giving insight in the code coverage percentage per project, package and class.
 
 'Mocking' is the creation of a test-version of a dependency. If a tested class uses a hardcoded dependency (like a database connection, or for instance System.in) then this is not possible. To make such a class testable, we refactor the hardcoded dependency into an instance field and add a setter for that field. The unit test can then set the mock dependency in the tested class before calling the tested method(s). Creating useful mock dependencies and refactoring the tested class can be quite a lot of work. There are frameworks that make this easier, for example JMock, EasyMock, Mockito to name a few. A very basic way to create a mock dependency is an anonymous inner class.
-
-
