@@ -11,3 +11,7 @@ Automated testing tools
   *webservice : soapUI (http://www.eviware.com/)
   *GUI : Selenium (http://seleniumhq.org/)
   *database : DbUnit? (see also http://www.agiledata.org/essays/databaseTesting.html)
+  *code coverage: http://www.eclemma.org/
+
+Design patterns:
+  * http://www.javacamp.org/designPattern/
