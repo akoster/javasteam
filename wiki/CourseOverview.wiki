@@ -43,7 +43,7 @@
         * Browse http://www.javacamp.org/designPattern/
     * practical
         * TODO AKO: find out how to mock InputStream
-        * TODO AKO: extend CarRental requirements
+        * DONE AKO: extend CarRental requirements
         * TODO AKO: deliver a working data service for CarRental
         * flesh out class diagram of CarRental
         * Create classes and JavaDoc matching the class diagram
