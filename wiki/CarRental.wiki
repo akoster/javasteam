@@ -1,4 +1,4 @@
-#summary CRS application for a car rental company
+#summary CRM application for a car rental company
 
 *Domain entities*
 
@@ -56,4 +56,3 @@ Contract maintenance
   * List all contracts
   * List contracts by customer id
   * List all contracts with a rental period containing a given date
-
