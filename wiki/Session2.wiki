@@ -1,4 +1,4 @@
-#summary Session2 summary
+#summary Summary of Session two
 
 Java through commandline
   * source code resides under a source folder, for example 'src\main\java' is the main source folder in a normal Maven project.
