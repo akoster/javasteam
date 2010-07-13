@@ -1,4 +1,4 @@
-#summary Session 3 summary
+#summary Summary of session three
 
 How to make an executable jar? 
 
