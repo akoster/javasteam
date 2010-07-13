@@ -6,6 +6,8 @@ import static org.junit.Assert.assertNull;
 import org.junit.Before;
 import org.junit.Test;
 
+// It is not useful to test classes if they only have fields and normal 
+// getters/setters, so maybe this test should be removed evenutally.
 public class VehicleTest {
 
 	private Vehicle instance;
