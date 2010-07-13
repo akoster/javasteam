@@ -13,6 +13,15 @@ double rentalPricePerDayEuro
 VehiclePolicy vehiclePolicy</string> 
      </void> 
     </void> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>insertVehicle()
+updateVehicle()
+getVehicleAll()
+getVehicleById()
+getVehicleByPrefix()</string> 
+     </void> 
+    </void> 
     <void property="name"> 
      <void property="text"> 
       <string>Vehicle</string> 
@@ -21,8 +30,8 @@ VehiclePolicy vehiclePolicy</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>42.0</double> 
-     <double>172.0</double> 
+     <double>43.0</double> 
+     <double>11.0</double> 
     </void> 
    </object> 
   </void> 
@@ -41,6 +50,15 @@ Date birthDate
 DriversLicense driversLicense</string> 
      </void> 
     </void> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>insertCustomer()
+updateCustomer()
+getCustomerAll()
+getCustomerById()
+getCustomerByPrefix()</string> 
+     </void> 
+    </void> 
     <void property="name"> 
      <void property="text"> 
       <string>Customer</string> 
@@ -49,8 +67,8 @@ DriversLicense driversLicense</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>552.0</double> 
-     <double>167.0</double> 
+     <double>553.0</double> 
+     <double>9.0</double> 
     </void> 
    </object> 
   </void> 
@@ -69,8 +87,12 @@ boolean depositAmountPayed</string>
     </void> 
     <void property="methods"> 
      <void property="text"> 
-      <string>
-</string> 
+      <string>insertVehicleRentalContract()
+updateVehicleRentalContract()
+getVehicleRentalContractAll()
+getVehicleRentalContractById()
+getVehicleRentalContractByPrefix()
+getVehicleRentalContractByDate()</string> 
      </void> 
     </void> 
     <void property="name"> 
@@ -81,8 +103,8 @@ boolean depositAmountPayed</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>931.0</double> 
-     <double>169.0</double> 
+     <double>911.0</double> 
+     <double>10.0</double> 
     </void> 
    </object> 
   </void> 
@@ -104,7 +126,7 @@ Date acquisitionDate </string>
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
      <double>508.0</double> 
-     <double>408.0</double> 
+     <double>348.0</double> 
     </void> 
    </object> 
   </void> 
@@ -127,8 +149,8 @@ E</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>361.0</double> 
-     <double>412.0</double> 
+     <double>362.0</double> 
+     <double>354.0</double> 
     </void> 
    </object> 
   </void> 
@@ -149,8 +171,8 @@ int heightCentimeters</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>199.0</double> 
-     <double>411.0</double> 
+     <double>277.0</double> 
+     <double>212.0</double> 
     </void> 
    </object> 
   </void> 
@@ -171,7 +193,7 @@ Date endDate</string>
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
      <double>977.0</double> 
-     <double>409.0</double> 
+     <double>350.0</double> 
     </void> 
    </object> 
   </void> 
@@ -186,6 +208,14 @@ int minimumAgeYears
 int minimumDriversExperienceYears</string> 
      </void> 
     </void> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>insertVehiclePolicy()
+updateVehiclePolicy()
+getVehiclePolicyAll()
+getVehiclePolicyById()</string> 
+     </void> 
+    </void> 
     <void property="name"> 
      <void property="text"> 
       <string>VehiclePolicy</string> 
@@ -194,8 +224,8 @@ int minimumDriversExperienceYears</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>12.0</double> 
-     <double>527.0</double> 
+     <double>3.0</double> 
+     <double>347.0</double> 
     </void> 
    </object> 
   </void> 
@@ -216,8 +246,8 @@ Truck</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>404.0</double> 
-     <double>618.0</double> 
+     <double>362.0</double> 
+     <double>560.0</double> 
     </void> 
    </object> 
   </void> 
