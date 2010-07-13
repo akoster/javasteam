@@ -12,7 +12,7 @@ Automated testing tools
   * GUI : Selenium (http://seleniumhq.org/)
   * database : DbUnit? (see also http://www.agiledata.org/essays/databaseTesting.html)
   * code coverage : http://www.eclemma.org/
-  * Mock frameworks : http://mockito.googlecode.com/svn/branches/1.5/javadoc/org/mockito/Mockito.html
+  * mock frameworks : Mockito (http://mockito.googlecode.com/svn/branches/1.5/javadoc/org/mockito/Mockito.html)
 
 Design patterns:
   * http://www.javacamp.org/designPattern/
