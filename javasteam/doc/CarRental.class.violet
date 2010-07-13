@@ -3,25 +3,26 @@
  <object class="com.horstmann.violet.ClassDiagramGraph"> 
   <void method="addNode"> 
    <object id="ClassNode0" class="com.horstmann.violet.ClassNode"> 
-    <void property="methods"> 
+    <void property="attributes"> 
      <void property="text"> 
-      <string>addNewCar()
-addNewCustomer()
-addNewContract()
-checkAvailability()
-</string> 
+      <string>long id
+String vehicleBusinessId
+int maxCargoWeightKilogram
+CargoSpace cargoSpace
+double rentalPricePerDayEuro
+VehiclePolicy vehiclePolicy</string> 
      </void> 
     </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>CarRental</string> 
+      <string>Vehicle</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>575.0</double> 
-     <double>17.0</double> 
+     <double>42.0</double> 
+     <double>172.0</double> 
     </void> 
    </object> 
   </void> 
@@ -30,38 +31,14 @@ checkAvailability()
     <void property="attributes"> 
      <void property="text"> 
       <string>long id
-String carBusinessId
-String carName
-String storageCompartmentDepthCentimeters
-int weightKilograms
-EnumDriversLicense driversLicense
-int maxLoadKilograms
-double rentalPrice</string> 
-     </void> 
-    </void> 
-    <void property="name"> 
-     <void property="text"> 
-      <string>Car</string> 
-     </void> 
-    </void> 
-   </object> 
-   <object class="java.awt.geom.Point2D$Double"> 
-    <void method="setLocation"> 
-     <double>125.0</double> 
-     <double>170.0</double> 
-    </void> 
-   </object> 
-  </void> 
-  <void method="addNode"> 
-   <object id="ClassNode2" class="com.horstmann.violet.ClassNode"> 
-    <void property="attributes"> 
-     <void property="text"> 
-      <string>long id
 String customerBusinessId
-EnumDriversLicense driversLicense
-String customerName
-
-</string> 
+String firstName
+String lastName
+String homeAddress
+int phoneNumber
+int bankAccountNumber
+Date birthDate
+DriversLicense driversLicense</string> 
      </void> 
     </void> 
     <void property="name"> 
@@ -72,21 +49,22 @@ String customerName
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>527.0</double> 
-     <double>170.0</double> 
+     <double>552.0</double> 
+     <double>167.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
-   <object id="ClassNode3" class="com.horstmann.violet.ClassNode"> 
+   <object id="ClassNode2" class="com.horstmann.violet.ClassNode"> 
     <void property="attributes"> 
      <void property="text"> 
       <string>long id
-String contractBusinessId
-Car carBusinessId
-Customer customerBusinessId
-Date periodStart
-Date periodEnd</string> 
+String vehicleRentalContractBusinessId
+Vehicle vehicle
+Customer customer
+RentalPeriod rentalPeriod
+double depositAmountEuro
+boolean depositAmountPayed</string> 
      </void> 
     </void> 
     <void property="methods"> 
@@ -97,7 +75,7 @@ Date periodEnd</string>
     </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>Contract</string> 
+      <string>VehicleRentalContract</string> 
      </void> 
     </void> 
    </object> 
@@ -109,50 +87,91 @@ Date periodEnd</string>
    </object> 
   </void> 
   <void method="addNode"> 
-   <object id="ClassNode4" class="com.horstmann.violet.ClassNode"> 
+   <object id="ClassNode3" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>List&lt;DriversLicenseType&gt; driversLicenseType
+int driversLicenseNumber
+Date acquisitionDate </string> 
+     </void> 
+    </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>PassengerCar
-</string> 
+      <string>DriversLicense</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>53.0</double> 
-     <double>467.0</double> 
+     <double>508.0</double> 
+     <double>408.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode4" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>A
+B
+C
+D
+E</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>DriversLicenseType</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>361.0</double> 
+     <double>412.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
    <object id="ClassNode5" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>int widthCentimeters
+int depthCentimeters
+int heightCentimeters</string> 
+     </void> 
+    </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>Truck
-</string> 
+      <string>CargoSpace</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>206.0</double> 
-     <double>473.0</double> 
+     <double>199.0</double> 
+     <double>411.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
    <object id="ClassNode6" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>Date startDate
+Date endDate</string> 
+     </void> 
+    </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>Bus
-</string> 
+      <string>RentalPeriod</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>363.0</double> 
-     <double>467.0</double> 
+     <double>977.0</double> 
+     <double>409.0</double> 
     </void> 
    </object> 
   </void> 
@@ -160,119 +179,107 @@ Date periodEnd</string>
    <object id="ClassNode7" class="com.horstmann.violet.ClassNode"> 
     <void property="attributes"> 
      <void property="text"> 
-      <string>PassengerCar
-Truck
-Bus</string> 
+      <string>long id
+VehicleType vehicleType
+List&lt;DriversLicenseType&gt; allowedDriversLicenseTypes
+int minimumAgeYears
+int minimumDriversExperienceYears</string> 
      </void> 
     </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>EnumDriversLicense</string> 
+      <string>VehiclePolicy</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>566.0</double> 
-     <double>431.0</double> 
+     <double>12.0</double> 
+     <double>527.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode8" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>Car
+Van
+Truck</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>VehicleType</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>404.0</double> 
+     <double>618.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="connect"> 
    <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="bentStyle"> 
-     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
-    </void> 
     <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
     </void> 
    </object> 
-   <object idref="ClassNode4"/> 
+   <object idref="ClassNode3"/> 
    <object idref="ClassNode1"/> 
   </void> 
   <void method="connect"> 
    <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="bentStyle"> 
-     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
-    </void> 
     <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
     </void> 
    </object> 
    <object idref="ClassNode5"/> 
-   <object idref="ClassNode1"/> 
+   <object idref="ClassNode0"/> 
   </void> 
   <void method="connect"> 
    <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="bentStyle"> 
-     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
-    </void> 
     <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode4"/> 
+   <object idref="ClassNode3"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
     </void> 
    </object> 
    <object idref="ClassNode6"/> 
-   <object idref="ClassNode1"/> 
-  </void> 
-  <void method="connect"> 
-   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
-    </void> 
-    <void property="lineStyle"> 
-     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
-    </void> 
-   </object> 
-   <object idref="ClassNode3"/> 
-   <object idref="ClassNode0"/> 
-  </void> 
-  <void method="connect"> 
-   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
-    </void> 
-    <void property="lineStyle"> 
-     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
-    </void> 
-   </object> 
-   <object idref="ClassNode3"/> 
-   <object idref="ClassNode0"/> 
-  </void> 
-  <void method="connect"> 
-   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
-    </void> 
-    <void property="lineStyle"> 
-     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
-    </void> 
-   </object> 
-   <object idref="ClassNode1"/> 
-   <object idref="ClassNode0"/> 
-  </void> 
-  <void method="connect"> 
-   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="bentStyle"> 
-     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
-    </void> 
-    <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
-    </void> 
-   </object> 
-   <object idref="ClassNode7"/> 
    <object idref="ClassNode2"/> 
   </void> 
   <void method="connect"> 
    <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="bentStyle"> 
-     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
-    </void> 
     <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
     </void> 
    </object> 
+   <object idref="ClassNode4"/> 
    <object idref="ClassNode7"/> 
-   <object idref="ClassNode1"/> 
   </void> 
   <void method="connect"> 
    <object class="com.horstmann.violet.ClassRelationshipEdge"> 
@@ -283,8 +290,20 @@ Bus</string>
      <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
     </void> 
    </object> 
-   <object idref="ClassNode2"/> 
+   <object idref="ClassNode7"/> 
    <object idref="ClassNode0"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode8"/> 
+   <object idref="ClassNode7"/> 
   </void> 
  </object> 
 </java> 
