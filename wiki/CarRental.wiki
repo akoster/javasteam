@@ -6,6 +6,9 @@ Vehicle
   * maximum cargo weight in kilograms
   * dimensions of cargo space (width x depth x height) in centimeters
   * rental price per day in euro's
+  
+VehiclePolicy 
+  * vehicle type (car, van, truck)
   * allowed driver's license types (subset of A, B, C, D, E)
   * minimum age
   * minimum years of driving experience
@@ -41,6 +44,12 @@ Vehicle maintenance
     * driver's license type
     * driver's age
     * driver's years of driving experience
+
+VehiclePolicy maintenance
+  * Enter new vehicle policy
+  * Find vehicle policy by id
+  * Update vehicle policy
+  * List all vehicle policies
 
 Customer maintenenance
   * Enter new customer
