@@ -41,9 +41,7 @@
     * reading
         * SCJP ch. 3
         * Browse http://www.javacamp.org/designPattern/
-    * practical
-        * TODO AKO: find out how to mock InputStream
-        * DONE AKO: extend CarRental requirements
+    * practical       
         * flesh out class diagram of CarRental
         * Create classes and JavaDoc matching the class diagram
         * Apply design patterns where useful (see javacamp site)
