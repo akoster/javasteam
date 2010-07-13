@@ -1,25 +1,27 @@
 package nl.javasteam.dotcomgame;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.IOException;
 import java.io.InputStream;
 
-import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
 
-public class GameHelperTest extends TestCase {
+public class GameHelperTest {
 
 	private GameHelper instance;
 
-	protected void setUp() throws Exception {
-		super.setUp();
+	@Before
+	public void setUp() throws Exception {
 		instance = new GameHelper();
-		
+
 		// anonymous inner class
 		InputStream in = new InputStream() {
 
-			// TODO AKO: find out how to terminate the input of an InputStream
-			// correctly
-			int[] data = new int[] { 'p', 'i', 'e', 't', 'j', 'e', 'p', 'u',
-					'k', '\r', '\n', '\n' };
+			static final byte inputStreamTerminationByte = -1;
+			byte[] data = new byte[] { 'p', 'i', 'e', 't', 'j', 'e', 'p', 'u',
+					'k', '\n', inputStreamTerminationByte };
 			int index = 0;
 
 			@Override
@@ -30,8 +32,9 @@ public class GameHelperTest extends TestCase {
 		instance.setIn(in);
 	}
 
+	@Test
 	public void testGetUserInput() {
-		String result = instance.getUserInput("bla");
+		String result = instance.getUserInput("");
 		assertEquals("pietjepuk", result);
 	}
 
