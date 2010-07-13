@@ -1,7 +1,7 @@
 package nl.javasteam.patterns.decorator;
 
 /**
- * Calculator for fees 
+ * Calculator for fees based on hours worked
  * 
  * @author mlapre
  */
@@ -13,6 +13,6 @@ public interface Calculator {
 	 * @param i
 	 * @return
 	 */
-	double calculate(int hours);
+	double calculate(int workedHours);
 
 }

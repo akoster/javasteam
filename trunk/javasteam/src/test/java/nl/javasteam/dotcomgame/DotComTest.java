@@ -1,19 +1,22 @@
 package nl.javasteam.dotcomgame;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
-import java.util.List;
 
-import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
 
-public class DotComTest extends TestCase {
+public class DotComTest {
 
 	private DotCom instance;
 
-	protected void setUp() throws Exception {
-		super.setUp();
+	@Before
+	public void setUp() throws Exception {
 		instance = new DotCom();
 	}
 
+	@Test
 	public void testCheckYourSelf() {
 		ArrayList<String> loc = new ArrayList<String>();
 		instance.setLocationCells(loc);

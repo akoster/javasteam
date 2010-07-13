@@ -7,13 +7,18 @@ package nl.javasteam.patterns.decorator;
  */
 public class FeeCalculator implements Calculator {
 
-	private int rate;
+	private int rateEuros;
 
-	public FeeCalculator(int rate) {
-		this.rate = rate;
+	/**
+	 * Creates an instance which uses the given rate
+	 * 
+	 * @param rateEuros
+	 */
+	public FeeCalculator(int rateEuros) {
+		this.rateEuros = rateEuros;
 	}
 
 	public double calculate(int hours) {
-		return hours * rate;
+		return hours * rateEuros;
 	}
 }
