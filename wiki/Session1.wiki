@@ -1,4 +1,4 @@
-#summary Summary of Session one
+#summary Summary of session one
 
 Install java 6 JDK
 
