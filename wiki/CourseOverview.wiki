@@ -47,7 +47,6 @@
         * flesh out class diagram of CarRental
         * Create classes and JavaDoc matching the class diagram
         * Apply design patterns where useful (see javacamp site)
-        * Logging with Log4j (add maven depdenceny in pom)
     
 =Session 5=
     * reading
@@ -58,5 +57,6 @@
         * TODO AKO: deliver a starting point for the CarRental service- and data access layer in nl.javasteam.carrental.data and nl.javasteam.carrental.service
         * implement CarRental domain classes in nl.javasteam.carrental.domain
         * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
+        * Logging with Log4j (add maven depdenceny in pom)
 
 =Session 6=
