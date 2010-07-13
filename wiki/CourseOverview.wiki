@@ -39,19 +39,24 @@
         
 =Session 4=
     * reading
-        * SCJP ch. 3 & 4 (p. 173 - 314)
+        * SCJP ch. 3
         * Browse http://www.javacamp.org/designPattern/
     * practical
         * TODO AKO: find out how to mock InputStream
         * DONE AKO: extend CarRental requirements
-        * TODO AKO: deliver a working data service for CarRental
         * flesh out class diagram of CarRental
         * Create classes and JavaDoc matching the class diagram
         * Apply design patterns where useful (see javacamp site)
         * Logging with Log4j (add maven depdenceny in pom)
     
-
-
 =Session 5=
+    * reading
+        * SCJP ch. 4 
+        * Browse Swing API http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html
+
+    * practical
+        * TODO AKO: deliver a starting point for the CarRental service- and data access layer in nl.javasteam.carrental.data and nl.javasteam.carrental.service
+        * implement CarRental domain classes in nl.javasteam.carrental.domain
+        * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
 
 =Session 6=
