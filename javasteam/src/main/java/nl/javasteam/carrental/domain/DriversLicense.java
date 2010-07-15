@@ -3,8 +3,11 @@ package nl.javasteam.carrental.domain;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CollectionOfElements;
 
 @Entity
@@ -29,7 +33,8 @@ public class DriversLicense {
 		this.id = id;
 	}
 	
-	@CollectionOfElements()
+	/*@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="driversLicenseType")
 	private List<DriversLicenseType> driversLicenseType;
 	
 	public List<DriversLicenseType> getDriversLicenseType(){
@@ -38,7 +43,7 @@ public class DriversLicense {
 	
 	public void setDriversLicenseType(List<DriversLicenseType> driversLicenseType){
 		this.driversLicenseType = driversLicenseType;
-	}
+	}*/
 	
 	@Column(name="driversLicenseNumber")
 	private int driversLicenseNumber;
