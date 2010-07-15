@@ -16,4 +16,5 @@ Automated testing tools
 
 Design patterns:
   * http://www.javacamp.org/designPattern/
-  * http://en.wikipedia.org/wiki/Decorator_pattern
+  * Decorator : http://en.wikipedia.org/wiki/Decorator_pattern
+  * Adapter : http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have
