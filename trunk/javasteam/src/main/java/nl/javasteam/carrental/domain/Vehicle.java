@@ -51,7 +51,7 @@ public class Vehicle {
 	}
 	
 	@OneToOne(optional=false)
-	@JoinColumn(name="id", unique=true, nullable=false, updatable=false)
+	@JoinColumn(name="id")
 	private CargoSpace cargoSpace;
 	
 	public CargoSpace getCargoSpace() {
