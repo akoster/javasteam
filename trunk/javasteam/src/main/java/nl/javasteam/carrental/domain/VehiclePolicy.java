@@ -1,5 +1,7 @@
 package nl.javasteam.carrental.domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +23,18 @@ public class VehiclePolicy {
 		this.id = id;
 	}
 	
-	@Column(name="vehicleType", length=10, updatable=true, nullable=false)
+	@Column(name="vehiclePolicyBusinessId")
+	private String vehiclePolicyBusinessId;
+	
+	public String getVehiclePolicyBusinessId(){
+		return vehiclePolicyBusinessId;
+	}
+	
+	public void setVehiclePolicyBusinessId(String vehiclePolicyBusinessId){
+		this.vehiclePolicyBusinessId = vehiclePolicyBusinessId;
+	}
+	
+	@Column(name="vehicleType")
 	private VehicleType vehicleType;
 	
 	public VehicleType getVehicleType(){
@@ -31,8 +44,19 @@ public class VehiclePolicy {
 	public void setVehicleType(VehicleType vehicleType){
 		this.vehicleType = vehicleType;
 	}
-		
-	@Column(name="minimumAgeYears", length=2, updatable=true, nullable=false)
+	
+	@Column(name="allowedDriversLicenseTypes")
+	private List<DriversLicenseType> allowedDriversLicenseTypes;
+	
+	public List<DriversLicenseType> getAllowedDriversLicenseTypes(){
+		return allowedDriversLicenseTypes;
+	}
+	
+	public void setAllowedDriversLicenseTypes(List<DriversLicenseType> allowedDriversLicenseTypes) {
+		this.allowedDriversLicenseTypes = allowedDriversLicenseTypes;
+	}
+	
+	@Column(name="minimumAgeYears")
 	private int minimumAgeYears;
 	
 	public int getMinimumAgeYears(){
@@ -43,7 +67,7 @@ public class VehiclePolicy {
 		this.minimumAgeYears = minimumAgeYears;
 	}
 	
-	@Column(name="minimumDriversExperienceYears", length=2, updatable=true, nullable=false)
+	@Column(name="minimumDriversExperienceYears")
 	private int minimumDriversExperienceYears;
 	
 	public int getMinimumDriversExperienceYears() {
