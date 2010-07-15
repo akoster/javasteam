@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 /**
  * A vehicle which can be rented
@@ -48,7 +50,8 @@ public class Vehicle {
 		this.maxCargoWeightKiloGram = maxCargoWeightKiloGram;
 	}
 	
-	@Column(name="cargoSpace")
+	@OneToOne(optional=false)
+	@JoinColumn(name="id", unique=true, nullable=false, updatable=false)
 	private CargoSpace cargoSpace;
 	
 	public CargoSpace getCargoSpace() {
@@ -70,7 +73,8 @@ public class Vehicle {
 		this.rentalPricePerDayEuro = rentalPricePerDayEuro;
 	}
 	
-	@Column(name="vehiclePolicy")
+	@OneToOne(optional=false)
+	@JoinColumn(name="id", unique=true, nullable=false, updatable=false)
 	private VehiclePolicy vehiclePolicy;
 	
 	public VehiclePolicy getVehiclePolicy(){
