@@ -15,26 +15,26 @@
         * SCJP ch. 10 ‘Development’ behalve 7.1 (static imports)
         * HFJ ch. 1 ‘Quick dip’ (p.1 - 26)
     * practical
-        * Ontwikkel tools installeren
-        * Nieuw Eclipse project maken met mvn archetype:generate
-        * Hello world Java applicatie maken en inchecken
-        * Project inchecken in Subversion (https://javasteam.googlecode.com/svn/trunk/)
+        * Install development tools
+        * Create new Eclipse project with mvn archetype:generate
+        * Create Hello world Java application 
+        * Check project into Subversion (https://javasteam.googlecode.com/svn/trunk/)
 
 =Session 2=
     * reading
         * SCJP ch. 1 & 2 skimmen
         * HFJ ch. 5 
     * practical
-        * SimpleDotCom game maken
-        * Gebruik van issue tracker (bijv. Bugzilla)
-        * Test driven developement: Unit- en integratie testen met JUnit
+        * Create SimpleDotCom game 
+        * Add the bug found in the GoogleCode issue tracker
+        * Convert the SimpleDotComTestDrive class to a JUnit test case
 
 =Session 3=
     * reading
         * HFJ ch. 6
     * practical
-        * Uitgebreide DotCom game afmaken
-        * Maak een klasse diagram voor de AutoVerhuur case        
+        * Create the full DotComBust game
+        * Create a class diagram for the CarRental CRM application using the requirements given in the Wiki
         * Unit testing continued, black/white box, code coverage, mocking
         
 =Session 4=
@@ -42,19 +42,18 @@
         * SCJP ch. 3
         * Browse http://www.javacamp.org/designPattern/
     * practical       
-        * flesh out class diagram of CarRental
+        * Further flesh out class diagram of CarRental
         * Create classes and JavaDoc matching the class diagram
-        * Apply design patterns where useful (see javacamp site)
+        * Apply design patterns where useful (see references)
     
 =Session 5=
     * reading
         * SCJP ch. 4 
-        * Browse Swing API http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html
-
+        * Browse Swing API 
     * practical
-        * TODO AKO: deliver a starting point for the CarRental service- and data access layer in nl.javasteam.carrental.data and nl.javasteam.carrental.service
         * implement CarRental domain classes in nl.javasteam.carrental.domain
+        * complete provided implementation of data layer in nl.javasteam.carrental.data
         * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
-        * Logging with Log4j (add maven depdenceny in pom)
+        * Add log4j dependency in pom.xml and configure log4j logging
 
 =Session 6=
