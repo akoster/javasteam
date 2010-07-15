@@ -4,11 +4,13 @@
 <hibernate-configuration>
 	<session-factory>
 		<mapping class="nl.javasteam.carrental.domain.Vehicle" />
+		<mapping class="nl.javasteam.carrental.domain.VehicleType" />
 		<mapping class="nl.javasteam.carrental.domain.CargoSpace" />
 		<mapping class="nl.javasteam.carrental.domain.VehiclePolicy" />
 		<mapping class="nl.javasteam.carrental.domain.VehicleRentalContract" />
 		<mapping class="nl.javasteam.carrental.domain.RentalPeriod" />
 		<mapping class="nl.javasteam.carrental.domain.Customer" />
 		<mapping class="nl.javasteam.carrental.domain.DriversLicense" />
+		<mapping class="nl.javasteam.carrental.domain.DriversLicenseType" />
 	</session-factory>
 </hibernate-configuration>
