@@ -14,8 +14,7 @@ Automated testing tools
   * code coverage : http://www.eclemma.org/
   * mock frameworks : Mockito (http://mockito.googlecode.com/svn/branches/1.5/javadoc/org/mockito/Mockito.html)
 
-Design patterns:
-  * Overview: http://en.wikipedia.org/wiki/Design_Patterns
+Design patterns: http://en.wikipedia.org/wiki/Design_Patterns
   * Abstract factory : http://en.wikipedia.org/wiki/Abstract_factory_pattern
   * Decorator : http://en.wikipedia.org/wiki/Decorator_pattern
   * Adapter : http://en.wikipedia.org/wiki/Adapter_pattern (see also this [http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have article on StackOverflow])
