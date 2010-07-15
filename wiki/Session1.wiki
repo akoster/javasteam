@@ -31,7 +31,7 @@ Check project into Subversion
     * Choose our google code repository
     * Choose project name as directory name (javasteam)
     * Eclipse switches to Team synchronization perspective
-    * Remove from view: target, .project and .classpath (these are Eclipse specific/generated file which we don't want in our code repository)
+    * Remove from view: target, .project and .classpath (these are Eclipse specific/generated files which we don't want in our code repository)
     * Commit and enter a comment
     * Switch to Java perspective
     * svn:ignore the three files not committed above 
