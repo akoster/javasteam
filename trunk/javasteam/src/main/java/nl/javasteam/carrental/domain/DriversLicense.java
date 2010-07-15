@@ -8,6 +8,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.CollectionOfElements;
 
 @Entity
 public class DriversLicense {
@@ -24,7 +29,7 @@ public class DriversLicense {
 		this.id = id;
 	}
 	
-	@Column(name="driversLicenseType")
+	@CollectionOfElements()
 	private List<DriversLicenseType> driversLicenseType;
 	
 	public List<DriversLicenseType> getDriversLicenseType(){
