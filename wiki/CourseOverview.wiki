@@ -40,7 +40,7 @@
 =Session 4=
     * reading
         * SCJP ch. 3
-        * Browse http://www.javacamp.org/designPattern/
+        * Browse Pattern references
     * practical       
         * Further flesh out class diagram of CarRental
         * Create classes and JavaDoc matching the class diagram
