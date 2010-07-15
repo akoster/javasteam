@@ -4,9 +4,13 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.CollectionOfElements;
 
 @Entity
 public class VehiclePolicy {
@@ -34,7 +38,7 @@ public class VehiclePolicy {
 		this.vehiclePolicyBusinessId = vehiclePolicyBusinessId;
 	}
 	
-	@Column(name="vehicleType")
+	/*@Column(name="vehicleType")
 	private VehicleType vehicleType;
 	
 	public VehicleType getVehicleType(){
@@ -43,9 +47,9 @@ public class VehiclePolicy {
 	
 	public void setVehicleType(VehicleType vehicleType){
 		this.vehicleType = vehicleType;
-	}
+	}*/
 	
-	@Column(name="allowedDriversLicenseTypes")
+	/*@Column(name="allowedDriversLicenseTypes")
 	private List<DriversLicenseType> allowedDriversLicenseTypes;
 	
 	public List<DriversLicenseType> getAllowedDriversLicenseTypes(){
@@ -54,7 +58,7 @@ public class VehiclePolicy {
 	
 	public void setAllowedDriversLicenseTypes(List<DriversLicenseType> allowedDriversLicenseTypes) {
 		this.allowedDriversLicenseTypes = allowedDriversLicenseTypes;
-	}
+	}*/
 	
 	@Column(name="minimumAgeYears")
 	private int minimumAgeYears;
