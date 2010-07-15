@@ -15,6 +15,10 @@ Automated testing tools
   * mock frameworks : Mockito (http://mockito.googlecode.com/svn/branches/1.5/javadoc/org/mockito/Mockito.html)
 
 Design patterns:
-  * http://www.javacamp.org/designPattern/
+  * Overview: http://en.wikipedia.org/wiki/Design_Patterns
   * Decorator : http://en.wikipedia.org/wiki/Decorator_pattern
-  * Adapter : http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have
+  * Adapter : http://en.wikipedia.org/wiki/Adapter_pattern
+ (see also [http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have this article on StackOverflow])
+
+Java libraries:
+  * Swing : http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html
