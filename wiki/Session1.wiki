@@ -15,7 +15,7 @@ JavaSteam google code project
     * Generate googlecode password for user on Source -> Checkout tab
     * Add repository https://javasteam.googlecode.com/svn (refers to JavaSteam Google code project)
 
-Install Maven 2.2.1 and created project
+Install Maven 2.2.1 and create project
     * Add system environment variabel MAVEN_HOME pointing to maven install directory
     * Add %MAVEN_HOME%\bin to system path
     * Open DOS box in Eclipse workspace directory
