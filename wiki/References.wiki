@@ -17,8 +17,7 @@ Automated testing tools
 Design patterns:
   * Overview: http://en.wikipedia.org/wiki/Design_Patterns
   * Decorator : http://en.wikipedia.org/wiki/Decorator_pattern
-  * Adapter : http://en.wikipedia.org/wiki/Adapter_pattern
- (see also this [http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have article on StackOverflow])
+  * Adapter : http://en.wikipedia.org/wiki/Adapter_pattern (see also this [http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have article on StackOverflow])
 
 Java libraries:
   * Swing : http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html
