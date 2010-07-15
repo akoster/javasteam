@@ -26,7 +26,7 @@ public class Vehicle {
 		this.id = id;
 	}
 	
-	@Column(name="vehicleBusinessId", updatable=true, length=20, unique=true)
+	@Column(name="vehicleBusinessId")
 	private String vehicleBusinessId;
 	
 	public String getVehicleBusinessId() {
@@ -37,7 +37,7 @@ public class Vehicle {
 		this.vehicleBusinessId = vehicleBusinessId;
 	}
 	
-	@Column(name="maxCargoWeightKiloGram", updatable=true, length=6, unique=false)
+	@Column(name="maxCargoWeightKiloGram")
 	private int maxCargoWeightKiloGram;
 	
 	public int getMaxCargoWeightKiloGram() {
@@ -48,7 +48,18 @@ public class Vehicle {
 		this.maxCargoWeightKiloGram = maxCargoWeightKiloGram;
 	}
 	
-	@Column(name="rentalPricePerDayEuro", updatable=true, unique=false)
+	@Column(name="cargoSpace")
+	private CargoSpace cargoSpace;
+	
+	public CargoSpace getCargoSpace() {
+		return cargoSpace;
+	}
+	
+	public void setCargoSpace(CargoSpace cargoSpace) {
+		this.cargoSpace = cargoSpace;
+	}
+	
+	@Column(name="rentalPricePerDayEuro")
 	private double rentalPricePerDayEuro;
 	
 	public double getRentalPricePerDayEuro() {
@@ -59,5 +70,14 @@ public class Vehicle {
 		this.rentalPricePerDayEuro = rentalPricePerDayEuro;
 	}
 	
+	@Column(name="vehiclePolicy")
+	private VehiclePolicy vehiclePolicy;
 	
+	public VehiclePolicy getVehiclePolicy(){
+		return vehiclePolicy;
+	}
+	
+	public void setVehiclePolicy(VehiclePolicy vehiclePolicy){
+		this.vehiclePolicy = vehiclePolicy;
+	}
 }
