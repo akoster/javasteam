@@ -4,5 +4,7 @@
 <hibernate-configuration>
 	<session-factory>
 		<mapping class="nl.javasteam.carrental.domain.Vehicle" />
+		<mapping class="nl.javasteam.carrental.domain.CargoSpace" />
+		<mapping class="nl.javasteam.carrental.domain.VehiclePolicy" />
 	</session-factory>
 </hibernate-configuration>
