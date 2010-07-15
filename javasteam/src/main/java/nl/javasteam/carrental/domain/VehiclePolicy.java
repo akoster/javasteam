@@ -21,21 +21,32 @@ public class VehiclePolicy {
 		this.id = id;
 	}
 	
-	@Column(name="minimumAgeYears", length=2, updatable=true, insertable=false)
+	@Column(name="vehicleType", length=10, updatable=true, nullable=false)
+	private VehicleType vehicleType;
+	
+	public VehicleType getVehicleType(){
+		return vehicleType;
+	}
+	
+	public void setVehicleType(VehicleType vehicleType){
+		this.vehicleType = vehicleType;
+	}
+		
+	@Column(name="minimumAgeYears", length=2, updatable=true, nullable=false)
 	private int minimumAgeYears;
 	
-	public int setMinimumAgeYears(){
+	public int getMinimumAgeYears(){
 		return minimumAgeYears;
 	}
 	
-	public void getMinimumAgeYears(int minimumAgeYears){
+	public void setMinimumAgeYears(int minimumAgeYears){
 		this.minimumAgeYears = minimumAgeYears;
 	}
 	
-	@Column(name="minimumDriversExperienceYears", length=2, updatable=true, insertable=false)
+	@Column(name="minimumDriversExperienceYears", length=2, updatable=true, nullable=false)
 	private int minimumDriversExperienceYears;
 	
-	public int setMinimumDriversExperienceYears() {
+	public int getMinimumDriversExperienceYears() {
 		return minimumDriversExperienceYears;
 	}
 	
