@@ -9,6 +9,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.CollectionOfElements;
 
@@ -38,7 +40,7 @@ public class VehiclePolicy {
 		this.vehiclePolicyBusinessId = vehiclePolicyBusinessId;
 	}
 	
-	/*@Column(name="vehicleType")
+	/*@OneToOne(mappedBy="vehicleType")
 	private VehicleType vehicleType;
 	
 	public VehicleType getVehicleType(){
