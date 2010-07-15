@@ -1,5 +1,6 @@
 package nl.javasteam.carrental.domain;
 
+import javax.persistence.Column;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
@@ -21,6 +22,7 @@ enum VehicleType {
 		this.id = id;
 	}
 	
+	@Column(name="vehicleType")
 	@Enumerated(EnumType.STRING)
 	private VehicleType vehicleType;
 	
