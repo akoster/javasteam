@@ -72,8 +72,7 @@ public class Vehicle {
 		this.rentalPricePerDayEuro = rentalPricePerDayEuro;
 	}
 	
-	@OneToOne(optional=false)
-	@JoinColumn(name="id", unique=true, nullable=false, updatable=false)
+	@OneToOne(targetEntity=VehiclePolicy.class)
 	private VehiclePolicy vehiclePolicy;
 	
 	public VehiclePolicy getVehiclePolicy(){
