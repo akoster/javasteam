@@ -1,6 +1,11 @@
 package nl.javasteam.carrental.domain;
 
-enum DriversLicenseType {
+/**
+ * DriversLicenseTypes
+ * 
+ * @author mlapre
+ */
+public enum DriversLicenseType {
 	A,
 	B,
 	C,
