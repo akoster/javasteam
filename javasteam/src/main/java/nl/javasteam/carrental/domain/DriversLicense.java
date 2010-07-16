@@ -12,19 +12,30 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CollectionOfElements;
 
+/**
+ * DriversLicense
+ * 
+ * @author mlapre
+ */
 @Entity
 public class DriversLicense {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+	private int driversLicenseNumber;
+	private Date acquisitionDate;
+	@CollectionOfElements()
+	@Enumerated(EnumType.STRING)
+	private List<DriversLicenseType> driversLicenseType;
+
 	public Long getId(){
 		return id;
 	}
@@ -32,21 +43,14 @@ public class DriversLicense {
 	public void setId(Long id){
 		this.id = id;
 	}
-	
-	/*@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="driversLicenseType")
-	private List<DriversLicenseType> driversLicenseType;
-	
+		
 	public List<DriversLicenseType> getDriversLicenseType(){
 		return driversLicenseType;
 	}
 	
 	public void setDriversLicenseType(List<DriversLicenseType> driversLicenseType){
 		this.driversLicenseType = driversLicenseType;
-	}*/
-	
-	@Column(name="driversLicenseNumber")
-	private int driversLicenseNumber;
+	}	
 	
 	public int getDriversLicenseNumber(){
 		return driversLicenseNumber;
@@ -55,9 +59,6 @@ public class DriversLicense {
 	public void setDriversLicenseNumber(int driversLicenseNumber){
 		this.driversLicenseNumber = driversLicenseNumber;
 	}
-	
-	@Column(name="acquisitionDate")
-	private Date acquisitionDate;
 	
 	public Date getAcquisitionDate(){
 		return acquisitionDate;
