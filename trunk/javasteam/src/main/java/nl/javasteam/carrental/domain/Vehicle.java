@@ -50,8 +50,7 @@ public class Vehicle {
 		this.maxCargoWeightKiloGram = maxCargoWeightKiloGram;
 	}
 	
-	@OneToOne(optional=false)
-	@JoinColumn(name="id")
+	@OneToOne(targetEntity=CargoSpace.class)
 	private CargoSpace cargoSpace;
 	
 	public CargoSpace getCargoSpace() {
