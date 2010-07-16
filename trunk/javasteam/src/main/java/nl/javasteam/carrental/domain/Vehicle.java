@@ -1,6 +1,8 @@
 package nl.javasteam.carrental.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +21,15 @@ public class Vehicle {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private String vehicleBusinessId;
+	private int maxCargoWeightKiloGram;
+	@Embedded
+	private CargoSpace cargoSpace;
+	private double rentalPricePerDayEuro;
+	@OneToOne(cascade = CascadeType.ALL)
+	private VehiclePolicy vehiclePolicy;
 
+	
 	public Long getId() {
 		return id;
 	}
@@ -27,10 +37,7 @@ public class Vehicle {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	@Column(name="vehicleBusinessId")
-	private String vehicleBusinessId;
-	
+		
 	public String getVehicleBusinessId() {
 		return vehicleBusinessId;
 	}
@@ -38,9 +45,6 @@ public class Vehicle {
 	public void setVehicleBusinessId(String vehicleBusinessId) {
 		this.vehicleBusinessId = vehicleBusinessId;
 	}
-	
-	@Column(name="maxCargoWeightKiloGram")
-	private int maxCargoWeightKiloGram;
 	
 	public int getMaxCargoWeightKiloGram() {
 		return maxCargoWeightKiloGram;
@@ -50,9 +54,6 @@ public class Vehicle {
 		this.maxCargoWeightKiloGram = maxCargoWeightKiloGram;
 	}
 	
-	@OneToOne(targetEntity=CargoSpace.class)
-	private CargoSpace cargoSpace;
-	
 	public CargoSpace getCargoSpace() {
 		return cargoSpace;
 	}
@@ -61,9 +62,6 @@ public class Vehicle {
 		this.cargoSpace = cargoSpace;
 	}
 	
-	@Column(name="rentalPricePerDayEuro")
-	private double rentalPricePerDayEuro;
-	
 	public double getRentalPricePerDayEuro() {
 		return rentalPricePerDayEuro;
 	}
@@ -71,10 +69,7 @@ public class Vehicle {
 	public void setRentalPricePerDayEuro(double rentalPricePerDayEuro){
 		this.rentalPricePerDayEuro = rentalPricePerDayEuro;
 	}
-	
-	@OneToOne(targetEntity=VehiclePolicy.class)
-	private VehiclePolicy vehiclePolicy;
-	
+		
 	public VehiclePolicy getVehiclePolicy(){
 		return vehiclePolicy;
 	}
