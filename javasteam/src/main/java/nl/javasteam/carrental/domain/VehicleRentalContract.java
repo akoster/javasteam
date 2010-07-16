@@ -35,8 +35,7 @@ public class VehicleRentalContract {
 		this.vehicleRentalContractBusinessId = vehicleRentalContractBusinessId;
 	}
 	
-	@OneToOne(optional=false)
-	@JoinColumn(name="id", unique=true, nullable=false, updatable=false)
+	@OneToOne(targetEntity=Vehicle.class)
 	private Vehicle vehicle;
 	
 	public Vehicle getVehicle() {
@@ -47,8 +46,7 @@ public class VehicleRentalContract {
 		this.vehicle = vehicle;
 	}
 	
-	@OneToOne(optional=false)
-	@JoinColumn(name="id", unique=true, nullable=false, updatable=false)
+	@OneToOne(targetEntity=Customer.class)
 	private Customer customer;
 	
 	public Customer getCustomer() {
@@ -59,8 +57,7 @@ public class VehicleRentalContract {
 		this.customer = customer;
 	}
 	
-	@OneToOne(optional=false)
-	@JoinColumn(name="id", unique=true, nullable=false, updatable=false)
+	@OneToOne(targetEntity=RentalPeriod.class)
 	private RentalPeriod rentalPeriod;
 	
 	public RentalPeriod getRentalPeriod() {
