@@ -2,21 +2,35 @@ package nl.javasteam.carrental.domain;
 
 import java.util.Date;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+/**
+ * Customer
+ * 
+ * @author mlapre
+ */
 @Entity
 public class Customer {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+	private String customerBusinessId;
+	private String firstName;
+	private String lastName;
+	private String homeAddress;
+	private int phoneNumber;
+	private int bankAccountNumber;
+	private Date birthDate;
+	@OneToOne(cascade = CascadeType.ALL)
+	private DriversLicense driversLicense;
+
+
 	public Long getId(){
 		return id;
 	}
@@ -24,10 +38,7 @@ public class Customer {
 	public void setId(Long id){
 		this.id = id;
 	}
-	
-	@Column(name="customerBusinessId")
-	private String customerBusinessId;
-	
+		
 	public String getCustomerBusinessId(){
 		return customerBusinessId;
 	}
@@ -35,10 +46,7 @@ public class Customer {
 	public void setCustomerBusinessId(String customerBusinessId){
 		this.customerBusinessId = customerBusinessId;
 	}
-	
-	@Column(name="firstName")
-	private String firstName;
-	
+		
 	public String getFirstName(){
 		return firstName;
 	}
@@ -46,9 +54,6 @@ public class Customer {
 	public void setFirstName(String firstName){
 		this.firstName = firstName;
 	}
-	
-	@Column(name="lastName")
-	private String lastName;
 	
 	public String getLastName(){
 		return lastName;
@@ -58,9 +63,6 @@ public class Customer {
 		this.lastName = lastName;
 	}
 	
-	@Column(name="homeAddress")
-	private String homeAddress;
-	
 	public String getHomeAddress(){
 		return homeAddress;
 	}
@@ -68,10 +70,7 @@ public class Customer {
 	public void setHomeAddress(String homeAddress){
 		this.homeAddress = homeAddress;
 	}
-	
-	@Column(name="phoneNumber")
-	private int phoneNumber;
-	
+		
 	public int getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -80,9 +79,6 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 	}
 	
-	@Column(name="bankAccountNumber")
-	private int bankAccountNumber;
-	
 	public int getBankAccountNumber() {
 		return bankAccountNumber;
 	}
@@ -90,10 +86,7 @@ public class Customer {
 	public void setBankAccountNumber(int bankAccountNumber){
 		this.bankAccountNumber = bankAccountNumber;
 	}
-	
-	@Column(name="birthDate")
-	private Date birthDate;
-	
+		
 	public Date getBirthDate(){
 		return birthDate;
 	}
@@ -101,9 +94,6 @@ public class Customer {
 	public void setBirthDate(Date birthDate){
 		this.birthDate = birthDate;
 	}
-	
-	@OneToOne(targetEntity=DriversLicense.class)
-	private DriversLicense driversLicense;
 	
 	public DriversLicense getDriversLicense(){
 		return driversLicense;
