@@ -1,21 +1,35 @@
 package nl.javasteam.carrental.domain;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
+/**
+ * A vehicleRentalContract
+ * 
+ * @author mlapre
+ */
 @Entity
 public class VehicleRentalContract {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+	private String vehicleRentalContractBusinessId;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Vehicle vehicle;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Customer customer;
+	@Embedded
+	private RentalPeriod rentalPeriod;
+	private double depositAmountEuro;
+	private boolean depositAmountPayed;
+
+		
 	public Long getId() {
 		return id;
 	}
@@ -23,9 +37,6 @@ public class VehicleRentalContract {
 	public void getId(Long id) {
 		this.id = id;
 	}
-	
-	@Column(name="vehicleRentalContractBusinessId")
-	private String vehicleRentalContractBusinessId;
 	
 	public String getVehicleRentalContractBusinessId() {
 		return vehicleRentalContractBusinessId;
@@ -35,9 +46,6 @@ public class VehicleRentalContract {
 		this.vehicleRentalContractBusinessId = vehicleRentalContractBusinessId;
 	}
 	
-	@OneToOne(targetEntity=Vehicle.class)
-	private Vehicle vehicle;
-	
 	public Vehicle getVehicle() {
 		return vehicle;
 	}
@@ -45,9 +53,6 @@ public class VehicleRentalContract {
 	public void setVehicle(Vehicle vehicle) {
 		this.vehicle = vehicle;
 	}
-	
-	@OneToOne(targetEntity=Customer.class)
-	private Customer customer;
 	
 	public Customer getCustomer() {
 		return customer;
@@ -57,9 +62,6 @@ public class VehicleRentalContract {
 		this.customer = customer;
 	}
 	
-	@OneToOne(targetEntity=RentalPeriod.class)
-	private RentalPeriod rentalPeriod;
-	
 	public RentalPeriod getRentalPeriod() {
 		return rentalPeriod;
 	}
@@ -68,9 +70,6 @@ public class VehicleRentalContract {
 		this.rentalPeriod = rentalPeriod;
 	}
 	
-	@Column(name="depositAmountEuro")
-	private double depositAmountEuro;
-	
 	public double getDepositAmountEuro() {
 		return depositAmountEuro;
 	}
@@ -78,9 +77,6 @@ public class VehicleRentalContract {
 	public void setDepositAmountEuro(double depositAmountEuro) {
 		this.depositAmountEuro = depositAmountEuro;
 	}
-	
-	@Column(name="depositAmountPayed")
-	private boolean depositAmountPayed;
 	
 	public boolean getDepositAmountPayed() {
 		return depositAmountPayed;
