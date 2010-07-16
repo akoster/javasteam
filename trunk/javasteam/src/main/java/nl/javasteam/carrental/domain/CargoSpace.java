@@ -1,29 +1,18 @@
 package nl.javasteam.carrental.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.Embeddable;
 
-@Entity
+/**
+ * CargoSpace of a Vehicle
+ * 
+ * @author mlapre
+ */
+@Embeddable
 public class CargoSpace {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	
-	public Long getId(){
-		return id;
-	}
-	
-	public void setId(Long id){
-		this.id = id;
-	}
-	
-	@Column(name="widthCentimeters")
 	private int widthCentimeters;
+	private int depthCentimeters;
+	private int heightCentimeters;
 	
 	public int getWidthCentimeters(){
 		return widthCentimeters;
@@ -32,10 +21,7 @@ public class CargoSpace {
 	public void setWidthCentimeters(int widthCentimeters) {
 		this.widthCentimeters = widthCentimeters;
 	}
-	
-	@Column(name="depthCentimeters")
-	private int depthCentimeters;
-	
+		
 	public int getDepthCentimeters() {
 		return depthCentimeters;
 	}
@@ -43,9 +29,6 @@ public class CargoSpace {
 	public void setDepthCentimeters(int depthCentimeters) {
 		this.depthCentimeters = depthCentimeters;
 	}
-	
-	@Column(name="heightCentimeters")
-	private int heightCentimeters;
 	
 	public int getHeightCentimeters() {
 		return heightCentimeters;
