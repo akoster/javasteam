@@ -102,8 +102,7 @@ public class Customer {
 		this.birthDate = birthDate;
 	}
 	
-	@OneToOne()
-	@JoinColumn(name="id", unique=true, nullable=false, updatable=false)
+	@OneToOne(targetEntity=DriversLicense.class)
 	private DriversLicense driversLicense;
 	
 	public DriversLicense getDriversLicense(){
