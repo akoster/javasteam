@@ -1,8 +1,8 @@
 Subversion manual
   http://www.germane-software.com/~ser/R_n_R/subversion.html#N61
 
-Semantic versioning
-  http://semver.org/
+Maven book
+  http://www.sonatype.com/books/mvnex-book/reference/public-book.html
 
 Compiling and running Java programs
   http://www.cs.swarthmore.edu/~newhall/unixhelp/debuggingtips_Java.html
@@ -23,4 +23,9 @@ Design patterns: http://en.wikipedia.org/wiki/Design_Patterns
 Java libraries:
   * Swing : http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html
   * JPA & Hibernate : http://javablog.co.uk/2008/01/23/persistence-options-in-java-part-3-jpa/
-Sun code conventions: http://java.sun.com/docs/codeconv/
+
+Sun code conventions
+  http://java.sun.com/docs/codeconv/
+
+Semantic versioning
+  http://semver.org/
