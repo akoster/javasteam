@@ -62,5 +62,6 @@
         * browse Stackoverflow.com
     * practical:
         * complete provided implementation of data layer in nl.javasteam.carrental.data
+        * complete VehicleServiceImpl (conversion of arguments)
         * complete UI workflow and screen design
         * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
