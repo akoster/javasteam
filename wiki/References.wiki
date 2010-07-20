@@ -29,3 +29,6 @@ Sun code conventions
 
 Semantic versioning
   http://semver.org/
+
+Stackoverflow: software development Q & A site
+http://stackoverflow.com/
