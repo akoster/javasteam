@@ -1,0 +1,9 @@
+#summary Summary of session five
+
+Discuss JPA/Hibernate annotations
+
+Look in detail at the mapping of enums. Only String and Ordinal mapping offered by default. Drawback of ordinal approach: it depends on the order of the enum values. Drawback of String approach: depends on exact name of enum value (could be refactored). Better solution: use dedicated database codes. Mapping of these is not trivial in Hibernate (see EnumUserType). TODO: (AKO) find out how to do this.
+
+Added Log4j and looked at simple log4j.properties setup. Loggers are hierarchical, following the java package structure by convention (although you are free to chose your own logger names). Loggers can be switched on/off in the properties file.
+
+Mocking with Mockito (see VehicleServiceTest). We mocked the VehicleDao to unit test the VehicleService (i.e. without depending on the database). You can use 'stub' to tell Mockito which values should be returned when a method is called. 'verify' is used after doing the test call to check if the expected methods were called, with the expected arguments. Mockito will then throw an error if the check fails.
