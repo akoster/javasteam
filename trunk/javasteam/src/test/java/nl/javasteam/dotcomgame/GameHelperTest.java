@@ -12,6 +12,8 @@ public class GameHelperTest {
 
 	private GameHelper instance;
 
+	private static final String input = "pietjepuk";
+
 	@Before
 	public void setUp() throws Exception {
 		instance = new GameHelper();
@@ -19,14 +21,16 @@ public class GameHelperTest {
 		// anonymous inner class
 		InputStream in = new InputStream() {
 
-			static final byte inputStreamTerminationByte = -1;
-			byte[] data = new byte[] { 'p', 'i', 'e', 't', 'j', 'e', 'p', 'u',
-					'k', '\n', inputStreamTerminationByte };
+			byte[] data = input.getBytes();
 			int index = 0;
 
 			@Override
 			public int read() throws IOException {
-				return data[index++];
+				if (index < data.length) {
+					return data[index++];
+				}
+				// terminate input stream
+				return -1;
 			}
 		};
 		instance.setIn(in);
@@ -34,8 +38,8 @@ public class GameHelperTest {
 
 	@Test
 	public void testGetUserInput() {
-		String result = instance.getUserInput("");
-		assertEquals("pietjepuk", result);
+		String result = instance.getUserInput("PROMPT");
+		assertEquals(input, result);
 	}
 
 }
