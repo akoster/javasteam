@@ -3,6 +3,10 @@ package nl.javasteam.carrental.service.impl;
 import java.util.List;
 
 import nl.javasteam.carrental.data.VehicleDao;
+import nl.javasteam.carrental.domain.CargoSpace;
+import nl.javasteam.carrental.domain.Customer;
+import nl.javasteam.carrental.domain.DriversLicenseType;
+import nl.javasteam.carrental.domain.RentalPeriod;
 import nl.javasteam.carrental.domain.Vehicle;
 import nl.javasteam.carrental.service.VehicleService;
 
@@ -14,15 +18,15 @@ public class VehicleServiceImpl implements VehicleService {
 		this.vehicleDao = vehicleDao;
 	}
 
-	public List<Vehicle> listAvailable(Object customer,
-			Object rentalPeriod, Object minCargoSpace,
+	public List<Vehicle> listAvailable(Customer customer,
+			RentalPeriod rentalPeriod, CargoSpace minCargoSpace,
 			int minCargoWeightKilogram, double maxRentalPrice) {
 
-		// TODO customer.getDriversLicence().getType()
-		Object driversLicenceType = null;
+		// TODO check for null values
+		List<DriversLicenseType> driversLicenceType = customer.getDriversLicense().getType();
 
 		// TODO convert customer.getBirthDate() to an age
-		int driverAge = 0;
+		int driverAge = 39;
 
 		// TODO convert customer.getDriversLicense().getAcquisitionDate() to
 		// experience years
