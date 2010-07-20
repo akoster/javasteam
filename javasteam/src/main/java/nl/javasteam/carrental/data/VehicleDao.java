@@ -16,7 +16,7 @@ public interface VehicleDao extends BaseDao<Vehicle, Long> {
 	// --Find vehicle by id
 	// --Update vehicle
 	// --List all vehicles
-
+	
 	/**
 	 * Lists available vehicles by customer criteria:
 	 * 
