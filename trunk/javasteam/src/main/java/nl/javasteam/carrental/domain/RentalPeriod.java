@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.persistence.Embeddable;
 
 /**
- * A rentalPeriod
+ * A rentalPeriod of a VehicleRentalContract
  * 
  * @author mlapre
  */
