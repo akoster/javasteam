@@ -19,7 +19,7 @@ public class VehicleRentalContract {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String vehicleRentalContractBusinessId;
+	private String code;
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Vehicle vehicle;
 	@ManyToOne(cascade = CascadeType.ALL)
@@ -38,12 +38,12 @@ public class VehicleRentalContract {
 		this.id = id;
 	}
 	
-	public String getVehicleRentalContractBusinessId() {
-		return vehicleRentalContractBusinessId;
+	public String getCode() {
+		return code;
 	}
 	
-	public void setVehicleRentalContractBusinessId(String vehicleRentalContractBusinessId) {
-		this.vehicleRentalContractBusinessId = vehicleRentalContractBusinessId;
+	public void setCode(String code) {
+		this.code = code;
 	}
 	
 	public Vehicle getVehicle() {
