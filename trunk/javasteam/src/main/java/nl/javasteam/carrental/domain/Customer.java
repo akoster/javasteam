@@ -20,7 +20,7 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String customerBusinessId;
+	private String code;
 	private String firstName;
 	private String lastName;
 	private String homeAddress;
@@ -39,12 +39,12 @@ public class Customer {
 		this.id = id;
 	}
 		
-	public String getCustomerBusinessId(){
-		return customerBusinessId;
+	public String getCode(){
+		return code;
 	}
 	
-	public void setCustomerBusinessId(String customerBusinessId){
-		this.customerBusinessId = customerBusinessId;
+	public void setCode(String code){
+		this.code = code;
 	}
 		
 	public String getFirstName(){
