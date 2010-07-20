@@ -53,6 +53,7 @@
         * implement CarRental domain classes in nl.javasteam.carrental.domain
         * add JPA/Hibernate annotations and generate database ddl using maven hibernate3 plugin
         * Add log4j dependency in pom.xml and configure log4j logging
+        * write a unit test for a service using Mockito to mock the DAO dependency
 
 =Session 6=
     * reading
@@ -63,4 +64,3 @@
         * complete provided implementation of data layer in nl.javasteam.carrental.data
         * complete UI workflow and screen design
         * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
-
