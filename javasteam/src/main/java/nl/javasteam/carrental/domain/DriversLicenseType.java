@@ -6,9 +6,32 @@ package nl.javasteam.carrental.domain;
  * @author mlapre
  */
 public enum DriversLicenseType {
-	A,
-	B,
-	C,
-	D,
-	E;
+	A("DLA"),
+
+	B("DLB"),
+
+	C("DLC"),
+
+	D("DLD"),
+
+	E("DLE");
+
+	private String code;
+
+	private DriversLicenseType(String code) {
+		this.code = code;
+	}
+
+	public String code() {
+		return code;
+	}
+
+	public DriversLicenseType valueOfCode(String code) {
+		for (DriversLicenseType type : values()) {
+			if (type.code().equals(code)) {
+				return type;
+			}
+		}
+		throw new IllegalArgumentException("No enum value mathces code " + code);
+	}
 }
