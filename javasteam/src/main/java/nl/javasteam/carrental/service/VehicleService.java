@@ -2,6 +2,9 @@ package nl.javasteam.carrental.service;
 
 import java.util.List;
 
+import nl.javasteam.carrental.domain.CargoSpace;
+import nl.javasteam.carrental.domain.Customer;
+import nl.javasteam.carrental.domain.RentalPeriod;
 import nl.javasteam.carrental.domain.Vehicle;
 
 /**
@@ -23,7 +26,7 @@ public interface VehicleService {
 	 * @param maxRentalPrice
 	 * @return
 	 */
-	List<Vehicle> listAvailable(Object customer, Object rentalPeriod,
-			Object minCargoSpace, int minCargoWeightKilogram,
+	List<Vehicle> listAvailable(Customer customer, RentalPeriod rentalPeriod,
+			CargoSpace minCargoSpace, int minCargoWeightKilogram,
 			double maxRentalPrice);
 }
