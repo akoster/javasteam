@@ -65,3 +65,18 @@ Contract maintenance
   * List all contracts
   * List contracts by customer id
   * List all contracts with a rental period containing a given date
+
+
+*User Interface*
+
+Workflow
+
+'A customer calls to inquire about renting a vehicle....'
+
+  * find customer by (partial) name
+    * customer exists: show customer record
+    * customer does not exist: ?
+    ....
+
+
+wizard?
