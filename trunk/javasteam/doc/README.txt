@@ -15,8 +15,10 @@ install MySql (5.1.46)
   make sure there is a user called 'root' with an empty password
 
 in the project root run:
-  mvn eclipse:eclipse clean package
+  mvn test
 a new database 'carrental' will be created in MySql
 
+run:
+  mvn eclipse:eclipse
 refresh in Eclipse; the classpath and source folders will be set correctly
 
