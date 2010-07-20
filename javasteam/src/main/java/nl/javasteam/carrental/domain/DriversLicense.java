@@ -3,20 +3,13 @@ package nl.javasteam.carrental.domain;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CollectionOfElements;
 
 /**
@@ -30,11 +23,13 @@ public class DriversLicense {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private int driversLicenseNumber;
+	private int number;
 	private Date acquisitionDate;
 	@CollectionOfElements()
 	@Enumerated(EnumType.STRING)
-	private List<DriversLicenseType> driversLicenseType;
+	// TODO (ako) find out how this works
+	//@Type(type = "nl.javasteam.carrental.domain.DriversLicenseTypeUserType", parameters = @Parameter(name = "type", value = "DriversLicenseType")) 
+	private List<DriversLicenseType> type;
 
 	public Long getId(){
 		return id;
@@ -44,20 +39,20 @@ public class DriversLicense {
 		this.id = id;
 	}
 		
-	public List<DriversLicenseType> getDriversLicenseType(){
-		return driversLicenseType;
+	public List<DriversLicenseType> getType(){
+		return type;
 	}
 	
-	public void setDriversLicenseType(List<DriversLicenseType> driversLicenseType){
-		this.driversLicenseType = driversLicenseType;
+	public void setType(List<DriversLicenseType> type){
+		this.type = type;
 	}	
 	
-	public int getDriversLicenseNumber(){
-		return driversLicenseNumber;
+	public int getNumber(){
+		return number;
 	}
 	
-	public void setDriversLicenseNumber(int driversLicenseNumber){
-		this.driversLicenseNumber = driversLicenseNumber;
+	public void setNumber(int number){
+		this.number = number;
 	}
 	
 	public Date getAcquisitionDate(){
