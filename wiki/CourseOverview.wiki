@@ -48,12 +48,19 @@
     
 =Session 5=
     * reading
-        * SCJP ch. 4 
-        * Browse Swing API 
+       * Browse Swing API
     * practical
         * implement CarRental domain classes in nl.javasteam.carrental.domain
-        * complete provided implementation of data layer in nl.javasteam.carrental.data
-        * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
+        * add JPA/Hibernate annotations and generate database ddl using maven hibernate3 plugin
         * Add log4j dependency in pom.xml and configure log4j logging
 
 =Session 6=
+    * reading
+        * SCJP ch. 4 
+        * browse Maven book (see references)
+        * browse Stackoverflow.com
+    * practical:
+        * complete provided implementation of data layer in nl.javasteam.carrental.data
+        * complete UI workflow and screen design
+        * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
+
