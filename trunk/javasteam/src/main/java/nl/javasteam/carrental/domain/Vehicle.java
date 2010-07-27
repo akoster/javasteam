@@ -20,6 +20,7 @@ public class Vehicle {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String code;
+	private String description;
 	private int maxCargoWeightKilogram;
 	@Embedded
 	private CargoSpace cargoSpace;
@@ -42,6 +43,14 @@ public class Vehicle {
 	
 	public void setCode(String code) {
 		this.code = code;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	public int getMaxCargoWeightKilogram() {
