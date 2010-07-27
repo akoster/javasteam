@@ -22,3 +22,5 @@ run:
   mvn eclipse:eclipse
 refresh in Eclipse; the classpath and source folders will be set correctly
 
+Populate database from commandline (until Spring version is upped):
+mysql carrental -u root -p < C:\dev\workspace\javasteam\src\main\resources\db\populateDB.txt
