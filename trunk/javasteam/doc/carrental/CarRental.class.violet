@@ -30,8 +30,8 @@ getVehicleByPrefix()</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>43.0</double> 
-     <double>11.0</double> 
+     <double>44.0</double> 
+     <double>10.0</double> 
     </void> 
    </object> 
   </void> 
@@ -112,7 +112,8 @@ getVehicleRentalContractByDate()</string>
    <object id="ClassNode3" class="com.horstmann.violet.ClassNode"> 
     <void property="attributes"> 
      <void property="text"> 
-      <string>List&lt;DriversLicenseType&gt; driversLicenseType
+      <string>Long id
+List&lt;DriversLicenseType&gt; driversLicenseType
 int driversLicenseNumber
 Date acquisitionDate </string> 
      </void> 
@@ -202,6 +203,7 @@ Date endDate</string>
     <void property="attributes"> 
      <void property="text"> 
       <string>long id
+String vehiclePolicyBusinessId
 VehicleType vehicleType
 List&lt;DriversLicenseType&gt; allowedDriversLicenseTypes
 int minimumAgeYears
@@ -224,7 +226,7 @@ getVehiclePolicyById()</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>3.0</double> 
+     <double>4.0</double> 
      <double>347.0</double> 
     </void> 
    </object> 
