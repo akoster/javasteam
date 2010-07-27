@@ -26,7 +26,7 @@ public class VehicleServiceImpl implements VehicleService {
 		List<DriversLicenseType> driversLicenceType = customer.getDriversLicense().getType();
 
 		// TODO convert customer.getBirthDate() to an age
-		int driverAge = 39;
+		int driverAge = 40;
 
 		// TODO convert customer.getDriversLicense().getAcquisitionDate() to
 		// experience years
