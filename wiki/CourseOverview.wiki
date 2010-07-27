@@ -57,6 +57,12 @@
 
 =Session 6=
     * reading
+        * -         
+    * practical:
+        * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
+
+=Session 7=
+    * reading
         * SCJP ch. 4 
         * browse Maven book (see references)
         * browse Stackoverflow.com
@@ -64,4 +70,3 @@
         * complete provided implementation of data layer in nl.javasteam.carrental.data
         * complete VehicleServiceImpl (conversion of arguments)
         * complete UI workflow and screen design
-        * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
