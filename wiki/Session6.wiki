@@ -1,4 +1,5 @@
 #summary Summary of Session six
+#labels summary
 
 Refactored Swing application to build an object hierarchy with constructors.
 
