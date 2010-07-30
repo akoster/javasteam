@@ -1,3 +1,5 @@
+#summary Useful links
+
 Subversion manual
   http://www.germane-software.com/~ser/R_n_R/subversion.html#N61
 
