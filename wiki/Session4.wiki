@@ -1,4 +1,5 @@
 #summary Summary of session four
+#labels summary
 
 discussion about OO-design: 
 
