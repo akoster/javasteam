@@ -1,4 +1,5 @@
 #summary Summary of session five
+#labels summary
 
 Discuss JPA/Hibernate annotations
 
