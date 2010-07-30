@@ -1,4 +1,5 @@
 #summary Summary of session one
+#labels summary
 
 Install java 6 JDK
 
