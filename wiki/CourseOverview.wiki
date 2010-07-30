@@ -68,6 +68,7 @@
         * browse Maven book (see references)
         * browse Stackoverflow.com
     * practical:
+        * discuss 'Constructors shouldn't call overridables'
         * complete provided implementation of data layer in nl.javasteam.carrental.data
         * complete VehicleServiceImpl (conversion of arguments)
         * complete UI workflow and screen design
