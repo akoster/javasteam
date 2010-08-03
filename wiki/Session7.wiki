@@ -15,3 +15,4 @@ Introduced the Gang of Four (GoF) design patterns. For example Singleton, Abstra
     * own example: nl.javasteam.patterns.decorator which demonstrates a 'pluggable' calculator.
 Patterns are useful in the communcation about software design, and offer time-proven approaches to common problems.
 
+Discussed the references article "Constructors shouldn't call overridables".
