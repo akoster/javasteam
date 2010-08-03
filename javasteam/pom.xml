@@ -7,6 +7,17 @@
 	<version>0.1.0-SNAPSHOT</version>
 	<name>JavaSteam</name>
 	<url>http://maven.apache.org</url>
+
+	<properties>
+		<spring.version>3.0.0.RELEASE</spring.version>
+		<hibernate.version>3.2.7.ga</hibernate.version>
+		<hibernate.annotations.version>3.3.0.ga</hibernate.annotations.version>
+		<!-- <hibernate.dialect>org.hibernate.dialect.MySQLInnoDBDialect</hibernate.dialect> -->
+		<jdbc.groupId>mysql</jdbc.groupId>
+		<jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
+		<jdbc.version>5.1.13</jdbc.version>
+	</properties>
+
 	<dependencies>
 
 		<dependency>
@@ -177,16 +188,6 @@
 
 	</build>
 
-	<properties>
-		<spring.version>2.5.6</spring.version>
-		<hibernate.version>3.2.7.ga</hibernate.version>
-		<hibernate.annotations.version>3.3.0.ga</hibernate.annotations.version>
-		<!-- <hibernate.dialect>org.hibernate.dialect.MySQLInnoDBDialect</hibernate.dialect> -->
-		<jdbc.groupId>mysql</jdbc.groupId>
-		<jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
-		<jdbc.version>5.1.13</jdbc.version>
-	</properties>
-
 	<repositories>
 		<repository>
 			<id>maven2-repository.dev.java.net</id>
@@ -200,5 +201,4 @@
 			<url>http://repository.jboss.org/maven2</url>
 		</repository>
 	</repositories>
-
 </project>
