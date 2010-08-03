@@ -28,7 +28,6 @@ public class Vehicle {
 	@ManyToOne(cascade = CascadeType.ALL)
 	private VehiclePolicy vehiclePolicy;
 
-	
 	public Long getId() {
 		return id;
 	}
