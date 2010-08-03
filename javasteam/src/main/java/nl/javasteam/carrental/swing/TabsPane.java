@@ -13,6 +13,8 @@ public class TabsPane extends JTabbedPane {
 	private static final long serialVersionUID = 1L;
 
 	public TabsPane() {
+		addTab("Customer", new CustomerPanel());		
 		addTab("Vehicle", new VehiclePanel());
+		addTab("VehicleRentalContract", new VehicleRentalContractPanel());
 	}	
 }
