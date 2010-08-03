@@ -1,7 +1,6 @@
 package nl.javasteam.carrental.swing;
 
 import java.util.List;
-import java.util.ResourceBundle;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -32,7 +31,22 @@ public class CustomerTableModel extends AbstractTableModel {
 		return customers.size();
 	}
 
+	@Override
+	public String getColumnName(int col) {
+		return columns[col].toString();
+	}
+	
 	public Object getValueAt(int row, int col) {
+		switch (col) {
+		case 0:
+			return customers.get(row).getCode();
+		case 1:
+			return customers.get(row).getHomeAddress();
+		case 2:
+			return customers.get(row).getPhoneNumber();
+		default:
+			break;
+		}		
 		return null;
 	}
 
