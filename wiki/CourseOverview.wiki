@@ -73,10 +73,14 @@
         * SCJP ch. 4 
         * browse Maven book (see references)
         * browse Stackoverflow.com
+        * Bouke: 
+           * read up on SCJP book
+           * Sun code conventions 
+           * other stuff mentioned in References
     * practical:
         * complete provided implementation of data layer in nl.javasteam.carrental.data
         * complete VehicleServiceImpl (conversion of arguments)
         * complete UI workflow and screen design
-    * Bouke:
-        * install environment
-        * read up on the design and partial implementation of CarRental. Discuss with Martijn who is working on this.
+        * Bouke:
+            * install environment
+            * read up on the design and partial implementation of CarRental. Discuss with Martijn who is working on this.
