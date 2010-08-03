@@ -48,6 +48,11 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
+	<bean id="customerDao"
+		class="nl.javasteam.carrental.data.hibernate.HibernateCustomerDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
 	<!-- Add new DAOs here -->
 
 </beans>
