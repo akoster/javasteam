@@ -64,11 +64,16 @@
 =Session 7=
     * reading
         * Read 'Constructors shouldn't call overridables': http://www.javapractices.com/topic/TopicAction.do?Id=215
+    * practical:
+        * overview of course so far 
+        * discuss 'Constructors shouldn't call overridables', see nl.javasteam.antipatterns.constructor
+
+=Session 8=
+    * reading
         * SCJP ch. 4 
         * browse Maven book (see references)
         * browse Stackoverflow.com
     * practical:
-        * discuss 'Constructors shouldn't call overridables'
         * complete provided implementation of data layer in nl.javasteam.carrental.data
         * complete VehicleServiceImpl (conversion of arguments)
         * complete UI workflow and screen design
