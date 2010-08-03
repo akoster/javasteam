@@ -1,6 +1,7 @@
 package nl.javasteam.carrental.swing;
 
 import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
 
 /**
  * CarRental User Interface
@@ -16,6 +17,7 @@ public class CarRentalUserInterFace extends JFrame {
 		setTitle("CarRental");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		tabsPane = new TabsPane();
+		tabsPane.setAlignmentY(RIGHT_ALIGNMENT);
 		add(tabsPane);
 		pack();
 		setSize(1000, 600);
