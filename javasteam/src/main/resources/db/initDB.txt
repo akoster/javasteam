@@ -2,6 +2,7 @@ DELETE FROM vehicle;
 
 DELETE FROM vehiclepolicy;
 
+DELETE FROM customer;
+
 DELETE FROM driverslicense;
 
-DELETE FROM customer;
