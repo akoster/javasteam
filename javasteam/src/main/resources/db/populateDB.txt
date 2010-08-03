@@ -8,6 +8,6 @@ INSERT INTO vehicle (id,description, depthCentimeters,heightCentimeters,widthCen
 INSERT INTO vehicle (id,description,depthCentimeters,heightCentimeters,widthCentimeters,code,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (4,'Citroen Xsara', 0, 0, 0, '78-AHH-28', 350, 90, 1);
 INSERT INTO vehicle (id,description,depthCentimeters,heightCentimeters,widthCentimeters,code,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (5,'Volkswagen polo', 0, 0, 0, '25-JD-FZ', 420, 85, 1);
 
-INSERT INTO driverslicense (id,acquisitionDate,number) VALUES (1,14/05/1976,01234567890);
+INSERT INTO driverslicense (id,acquisitionDate,number) VALUES (1,'1996-05-14 23:59:00',01234567890);
 
-INSERT INTO customer (id,bankAccountNumber,birthDate,code,firstName,homeAddress,lastName,phoneNumber,driversLicense_id) values (1,12345678,14/05/1976,"See","Martijn","Boeing Avenue 236","Lapré","0202061049",1);
+INSERT INTO customer (id,bankAccountNumber,birthDate,code,firstName,homeAddress,lastName,phoneNumber,driversLicense_id) values (1,12345678,'1976-05-14 23:48:00',"See","Martijn","Boeing Avenue 236","Lapré","0202061049",1);
