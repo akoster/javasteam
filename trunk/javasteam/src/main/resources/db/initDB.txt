@@ -1,3 +1,7 @@
 DELETE FROM vehicle;
 
 DELETE FROM vehiclepolicy;
+
+DELETE FROM driverslicense;
+
+DELETE FROM customer;
