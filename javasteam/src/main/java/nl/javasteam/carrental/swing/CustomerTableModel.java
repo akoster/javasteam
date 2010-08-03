@@ -25,11 +25,11 @@ public class CustomerTableModel extends AbstractTableModel {
 	}
 	
 	public int getColumnCount() {
-		return 0;
+		return columns.length;
 	}
 	
 	public int getRowCount() {
-		return 0;
+		return customers.size();
 	}
 
 	public Object getValueAt(int row, int col) {
