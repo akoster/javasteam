@@ -2,20 +2,18 @@ package nl.javasteam.antipatterns.constructor;
 
 class Fish extends Animal {
 
-	private String fishName;
+	private String name;
 
-	public Fish() {
-		printName();
-	}
-	
-	public void setName(String fishName) {
-		this.fishName = fishName;
+	public Fish() {		
+		// super() is called implicitly 
+		// during Animal() construction printName() is called				
+		name = "Fish";
+		addFeature("Scales", "Fins", "Gills");
 	}
 
-	/**
-	 * Please call setName before calling printName
-	 */
 	public void printName() {
-		System.out.println("Fish name is " + fishName.toString());
+		// printname depends on initialization of the 'name' field
+		// but it is called before that, so causes a NullpointerExcption here
+		System.out.println("I am a " + name.toString());
 	}
 }
