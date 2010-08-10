@@ -86,6 +86,7 @@
            * read other stuff mentioned in References
     * practical:
         * install development environment for Bouke
+        * fix broken build of existing project by installing and using Maven 2.0.9 instead of 2.2.1
         * complete provided implementation of data layer in nl.javasteam.carrental.data
         * complete VehicleServiceImpl (conversion of arguments)
         * complete CarRental Swing UI based on UI flow design       
