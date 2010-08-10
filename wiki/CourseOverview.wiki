@@ -70,17 +70,22 @@
 
 =Session 8=
     * reading
+        * - 
+    * practical
+        * fixed configuration issues in CarRental
+        * complete UI workflow and screen design
+        * check out existing project and review it            
+
+=Session 9=
         * SCJP ch. 4 
         * browse Maven book (see references)
         * browse Stackoverflow.com
         * Bouke: 
            * read up on SCJP book
-           * Sun code conventions 
-           * other stuff mentioned in References
+           * read Sun code conventions 
+           * read other stuff mentioned in References
     * practical:
+        * install development environment for Bouke
         * complete provided implementation of data layer in nl.javasteam.carrental.data
         * complete VehicleServiceImpl (conversion of arguments)
-        * complete UI workflow and screen design
-        * Bouke:
-            * install environment
-            * read up on the design and partial implementation of CarRental. Discuss with Martijn who is working on this.
+        * complete CarRental Swing UI based on UI flow design       
