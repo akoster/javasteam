@@ -1,4 +1,5 @@
 #summary CRM application for a car rental company
+#labels Phase-Design
 
 *Domain entities*
 
@@ -69,14 +70,4 @@ Contract maintenance
 
 *User Interface*
 
-Workflow
-
-'A customer calls to inquire about renting a vehicle....'
-
-  * find customer by (partial) name
-    * customer exists: show customer record
-    * customer does not exist: ?
-    ....
-
-
-wizard?
+<img src="http://javasteam.googlecode.com/svn/trunk/javasteam/doc/carrental/CarRental_UI_flow_design.jpg"/>
