@@ -1,36 +1,38 @@
 #summary Useful links
 
-Subversion manual
-  http://www.germane-software.com/~ser/R_n_R/subversion.html#N61
+=Development=
 
-Maven book
-  http://www.sonatype.com/books/mvnex-book/reference/public-book.html
+  * [http://www.germane-software.com/~ser/R_n_R/subversion.html#N61 Subversion manual]
+  * [http://www.sonatype.com/books/mvnex-book/reference/public-book.html Maven book]
+  * [http://www.cs.swarthmore.edu/~newhall/unixhelp/debuggingtips_Java.html Compiling and running Java programs]
+  * [http://java.sun.com/docs/codeconv Sun code conventions]
+  * [http://semver.org/ Semantic versioning]
+  * [http://stackoverflow.com Stackoverflow] Software development Q & A site
 
-Compiling and running Java programs
-  http://www.cs.swarthmore.edu/~newhall/unixhelp/debuggingtips_Java.html
+=Design=
 
-Automated testing tools
-  * webservice : soapUI (http://www.eviware.com/)
-  * GUI : Selenium (http://seleniumhq.org/)
-  * database : DbUnit? (see also http://www.agiledata.org/essays/databaseTesting.html)
-  * code coverage : http://www.eclemma.org/
-  * mock frameworks : Mockito (http://mockito.googlecode.com/svn/branches/1.5/javadoc/org/mockito/Mockito.html)
+==Patterns==
+Design patterns originated as an architectural concept by Christopher Alexander (1977/79). In software design the most common ones are the 23 [http://en.wikipedia.org/wiki/Design_Patterns_(book)#Creational_patterns 'Gang of Four' (GoF) patterns], which are divided into creational, structural and behavioral patterns. See also this
+[http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have article on StackOverflow])
 
-Design patterns: http://en.wikipedia.org/wiki/Design_Patterns
-  * Abstract factory : http://en.wikipedia.org/wiki/Abstract_factory_pattern
-  * Decorator : http://en.wikipedia.org/wiki/Decorator_pattern
-  * Adapter : http://en.wikipedia.org/wiki/Adapter_pattern (see also this [http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have article on StackOverflow])
-  * Template method : http://en.wikipedia.org/wiki/Template_method_pattern
+Examples:
+  * [http://en.wikipedia.org/wiki/Abstract_factory_pattern Abstract factory]
+  * [http://en.wikipedia.org/wiki/Decorator_pattern Decorator]
+  * [http://en.wikipedia.org/wiki/Adapter_pattern Adapter] (see also  [http://stackoverflow.com/questions/3253015/is-the-adapter-pattern-usable-in-cases-where-the-different-interface-methods-have this article on StackOverflow])
+  * [http://en.wikipedia.org/wiki/Template_method_pattern Template method]
+  * [http://en.wikipedia.org/wiki/Facade_pattern Facade]
+==Anti-patterns==
+  * [http://www.javapractices.com/topic/TopicAction.do?Id=215 constructors should not call overridable methods]
+  * [http://stackoverflow.com/questions/3456177/calling-super-super-class-method calling a method in your super-super class]
 
-Java libraries:
-  * Swing : http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html
-  * JPA & Hibernate : http://javablog.co.uk/2008/01/23/persistence-options-in-java-part-3-jpa/
 
-Sun code conventions
-  http://java.sun.com/docs/codeconv/
+=Testing=
+  * [http://soapui.org/ SoapUI] for testing webservices
+  * [http://seleniumhq.org/ Selenium] for testing web UI's
+  * [http://www.agiledata.org/essays/databaseTesting.html database testing]. See DbUnit
+  * [http://www.eclemma.org code coverage] to find out which part of your code is touched by your tests
+  * [http://mockito.googlecode.com/svn/branches/1.5/javadoc/org/mockito/Mockito.html Mockito] for easily setting up mock dependencies in unit tests
 
-Semantic versioning
-  http://semver.org/
-
-Stackoverflow: software development Q & A site
-http://stackoverflow.com/
+=Java libraries=
+  * [http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html Swing]
+  * [http://javablog.co.uk/2008/01/23/persistence-options-in-java-part-3-jpa JPA & Hibernate]
