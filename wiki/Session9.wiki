@@ -14,7 +14,7 @@ Reviewed Continuum project site
 
 Found buglet (unused parameter in private method)
 
-Wrestled with build of project:
+Wrestled with build of project
 * maven / Java compatibility issues
 * Nexus repository configuration in settings.xml
 * Generating SSH keypair, deploying public key to server
