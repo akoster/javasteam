@@ -76,7 +76,14 @@
         * complete UI workflow and screen design
         * check out existing project and review it            
 
-=Session 9=
+=Session 10=
+    * reading
+        * -
+    * practical:
+        * check out existing company project and review it
+
+=Session 10=
+    * reading
         * SCJP ch. 4 
         * browse Maven book (see references)
         * browse Stackoverflow.com
