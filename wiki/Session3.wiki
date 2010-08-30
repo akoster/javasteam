@@ -1,13 +1,17 @@
 #summary Summary of session three
 #labels summary
 
-How to make an executable jar? 
+How to make an executable jar
 
-To specify the source directory use -C sourcedir .
+To make new executable jarfile for the DotComBust game, from the project root do:
+  jar cfe dotcomgame.jar nl.javasteam.dotcomgame.DotComBust -C target\classes .
 
-You can run a jar with java -jar if you add the entrypoint in the manifest (see Session1)
+This adds the Main-Class 'nl.javasteam.dotcomgame.DotComBust' to the generated META-INF\MANIFEST.MF file in the jar. 
 
-*TODO AKO: find out how to make a jar which starts after double-cliking it (like violet UML)*
+You can run the jarfile with:
+  java -jar dotcomgame.jar
+
+Note that any class dependencies (Spring libraries etc.) the application has should either be contained within the jarfile, or should be provided separately and added to the classpath.
 
 If you checkout a project from the VCS (i.e. Subversion) there are Eclipse-specific artefacts like .classpath and .project present. To set the correct (Maven) source directories and dependencies you have to run 'mvn eclipse:eclipse' in the project root and refresh the project in Eclipse (F5).
 
