@@ -96,7 +96,6 @@ public class HibernateBaseDao<T, PK extends Serializable> extends
 	/**
 	 * {@inheritDoc}
 	 */
-	@SuppressWarnings("unchecked")
 	public List<T> getAll() {
 		return super.getHibernateTemplate().loadAll(this.persistentClass);
 	}
@@ -104,7 +103,6 @@ public class HibernateBaseDao<T, PK extends Serializable> extends
 	/**
 	 * {@inheritDoc}
 	 */
-	@SuppressWarnings("unchecked")
 	public T get(PK id) {
 		T entity = (T) super.getHibernateTemplate().get(this.persistentClass,
 				id);
@@ -121,7 +119,6 @@ public class HibernateBaseDao<T, PK extends Serializable> extends
 	/**
 	 * {@inheritDoc}
 	 */
-	@SuppressWarnings("unchecked")
 	public boolean exists(PK id) {
 		T entity = (T) super.getHibernateTemplate().get(this.persistentClass,
 				id);
@@ -131,7 +128,6 @@ public class HibernateBaseDao<T, PK extends Serializable> extends
 	/**
 	 * {@inheritDoc}
 	 */
-	@SuppressWarnings("unchecked")
 	public T save(T object) {
 		return (T) super.getHibernateTemplate().merge(object);
 	}

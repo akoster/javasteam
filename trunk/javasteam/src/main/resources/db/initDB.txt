@@ -1,8 +1,13 @@
 DELETE FROM vehicle;
 
+DELETE FROM vehiclepolicy_alloweddriverslicensetypes;
+
 DELETE FROM vehiclepolicy;
 
 DELETE FROM customer;
 
+DELETE FROM driverslicense_types;
+
 DELETE FROM driverslicense;
 
+DELETE FROM vehiclerentalcontract;
