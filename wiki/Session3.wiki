@@ -6,7 +6,7 @@ How to make an executable jar?
 To specify the source directory use -C sourcedir .
 
 You can run a jar with java -jar if you add the entrypoint in the manifest (see Session1)
-TODO AKO: find out how to make a jar which starts after double-cliking it (like violet UML)
+*TODO AKO: find out how to make a jar which starts after double-cliking it (like violet UML)*
 
 If you checkout a project from the VCS (i.e. Subversion) there are Eclipse-specific artefacts like .classpath and .project present. To set the correct (Maven) source directories and dependencies you have to run 'mvn eclipse:eclipse' in the project root and refresh the project in Eclipse (F5).
 
