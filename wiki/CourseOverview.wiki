@@ -76,7 +76,7 @@
         * complete UI workflow and screen design
         * check out existing project and review it            
 
-=Session 10=
+=Session 9=
     * reading
         * -
     * practical:
