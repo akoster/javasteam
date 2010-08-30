@@ -1,11 +1,14 @@
 package nl.javasteam.carrental.domain;
 
+import org.hibernate.annotations.TypeDef;
+
 /**
  * DriversLicenseTypes
  * 
  * @author mlapre
  */
 public enum DriversLicenseType {
+
 	A("DLA"),
 
 	B("DLB"),
@@ -26,12 +29,12 @@ public enum DriversLicenseType {
 		return code;
 	}
 
-	public DriversLicenseType valueOfCode(String code) {
+	public static DriversLicenseType valueOfCode(String code) {
 		for (DriversLicenseType type : values()) {
 			if (type.code().equals(code)) {
 				return type;
 			}
 		}
-		throw new IllegalArgumentException("No enum value mathces code " + code);
+		throw new IllegalArgumentException("No enum value matches code " + code);
 	}
 }

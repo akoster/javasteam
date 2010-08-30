@@ -10,6 +10,6 @@ public class AnnotationTest {
 	@Test
 	public void test() {
 		Assert.isTrue(Vehicle.class.isAnnotationPresent(Entity.class));
-		Assert.isTrue(!EnumUserType.class.isAnnotationPresent(Entity.class));
+		Assert.isTrue(!DriversLicenseTypeDef.class.isAnnotationPresent(Entity.class));
 	}
 }

@@ -1,16 +1,17 @@
 package nl.javasteam.carrental.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.CollectionOfElements;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
 /**
  * DriversLicense
@@ -18,6 +19,7 @@ import org.hibernate.annotations.CollectionOfElements;
  * @author mlapre
  */
 @Entity
+@TypeDef(name = DriversLicenseTypeDef.NAME, typeClass = DriversLicenseTypeDef.class)
 public class DriversLicense {
 
 	@Id
@@ -26,40 +28,45 @@ public class DriversLicense {
 	private int number;
 	private Date acquisitionDate;
 	@CollectionOfElements()
-	@Enumerated(EnumType.STRING)
-	// TODO (ako) find out how this works
-	//@Type(type = "nl.javasteam.carrental.domain.DriversLicenseTypeUserType", parameters = @Parameter(name = "type", value = "DriversLicenseType")) 
-	private List<DriversLicenseType> type;
+	@Type(type = DriversLicenseTypeDef.NAME)
+	private List<DriversLicenseType> types;
 
-	public Long getId(){
+	public Long getId() {
 		return id;
 	}
-	
-	public void setId(Long id){
+
+	public void setId(Long id) {
 		this.id = id;
 	}
-		
-	public List<DriversLicenseType> getType(){
-		return type;
+
+	public List<DriversLicenseType> getTypes() {
+		if (types == null) {
+			types = new ArrayList<DriversLicenseType>();
+		}
+		return types;
 	}
-	
-	public void setType(List<DriversLicenseType> type){
-		this.type = type;
-	}	
-	
-	public int getNumber(){
+
+	public void setTypes(List<DriversLicenseType> type) {
+		this.types = type;
+	}
+
+	public void addType(DriversLicenseType type) {
+		getTypes().add(type);
+	}
+
+	public int getNumber() {
 		return number;
 	}
-	
-	public void setNumber(int number){
+
+	public void setNumber(int number) {
 		this.number = number;
 	}
-	
-	public Date getAcquisitionDate(){
+
+	public Date getAcquisitionDate() {
 		return acquisitionDate;
 	}
-	
-	public void setAcquisitionDate(Date acquisitionDate){
+
+	public void setAcquisitionDate(Date acquisitionDate) {
 		this.acquisitionDate = acquisitionDate;
 	}
 }

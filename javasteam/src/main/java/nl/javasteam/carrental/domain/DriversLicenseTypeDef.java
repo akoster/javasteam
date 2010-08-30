@@ -5,55 +5,47 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
-import java.util.Properties;
 
 import org.hibernate.HibernateException;
-import org.hibernate.usertype.ParameterizedType;
 import org.hibernate.usertype.UserType;
 
-// TODO (ako) find out how to use this to custom map enums
-public class EnumUserType implements UserType, ParameterizedType {
+/**
+ * Hibernate TypeDef which maps instances of the enum DriversLicenseTypes to its
+ * custom 'code' field.
+ * 
+ * @author Adriaan
+ */
+public class DriversLicenseTypeDef implements UserType {
 
+	public static final String NAME = "driversLicense";
+	
 	private static final int[] SQL_TYPES = { Types.VARCHAR };
-	private Class clazz = null;
-
-	public EnumUserType() {
-	}
-
-	public void setParameterValues(Properties parameters) {
-		String className = (String) parameters.get("type");
-		try {
-			this.clazz = Class.forName(className);
-		} catch (ClassNotFoundException e) {
-			throw new RuntimeException("Couldn't get the class for name ["
-					+ className + "].", e);
-		}
-	}
 
 	public int[] sqlTypes() {
 		return SQL_TYPES;
 	}
 
-	public Class returnedClass() {
-		return clazz;
+	public Class<DriversLicenseType> returnedClass() {
+		return DriversLicenseType.class;
 	}
 
-	public Object nullSafeGet(ResultSet resultSet, String[] names, Object owner)
+	public Object nullSafeGet(ResultSet rs, String[] names, Object owner)
 			throws HibernateException, SQLException {
-		String name = resultSet.getString(names[0]);
-		Object result = null;
-		if (!resultSet.wasNull()) {
-			result = Enum.valueOf(clazz, name);
+
+		String code = rs.getString(names[0]);
+		if (rs.wasNull()) {
+			return null;
 		}
-		return result;
+		return DriversLicenseType.valueOfCode(code);
 	}
 
-	public void nullSafeSet(PreparedStatement preparedStatement, Object value,
-			int index) throws HibernateException, SQLException {
-		if (null == value) {
-			preparedStatement.setNull(index, Types.VARCHAR);
+	public void nullSafeSet(PreparedStatement st, Object value, int index)
+			throws HibernateException, SQLException {
+
+		if (value == null) {
+			st.setNull(index, Types.VARCHAR);
 		} else {
-			preparedStatement.setString(index, ((Enum) value).name());
+			st.setString(index, ((DriversLicenseType) value).code());
 		}
 	}
 

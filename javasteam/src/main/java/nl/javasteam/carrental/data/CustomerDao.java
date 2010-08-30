@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.List;
 
 import nl.javasteam.carrental.domain.Customer;
-import nl.javasteam.carrental.domain.DriversLicense;
 
 /**
  * 

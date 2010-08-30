@@ -67,7 +67,7 @@ public class VehicleServiceTest {
 		DriversLicense driversLicense = new DriversLicense();
 		List<DriversLicenseType> types = new ArrayList<DriversLicenseType>();
 		types.add(DriversLicenseType.B);
-		driversLicense.setType(types);
+		driversLicense.setTypes(types);
 		customer.setDriversLicense(driversLicense);
    
 		int driverAge = (int) ((System.currentTimeMillis() - birthDateTimestamp) / ONE_YEAR_IN_MILLISECONDS);

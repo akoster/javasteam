@@ -23,7 +23,7 @@ public class VehicleServiceImpl implements VehicleService {
 			int minCargoWeightKilogram, double maxRentalPrice) {
 
 		// TODO check for null values
-		List<DriversLicenseType> driversLicenceType = customer.getDriversLicense().getType();
+		List<DriversLicenseType> driversLicenceType = customer.getDriversLicense().getTypes();
 
 		// TODO convert customer.getBirthDate() to an age
 		int driverAge = 40;
