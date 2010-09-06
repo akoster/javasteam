@@ -22,7 +22,7 @@ Install Maven 2.0.9
 
 Creating a new project
 
-One way to do this is to use the Maven archectype plugin. This offers a fast way to generate a default project setup for many common stacks. We will try the simplest 'maven-quickstart' archetype which is not very useful, but shows the principal.
+One way to do this is to use the Maven archectype plugin. This offers a fast way to generate a default project setup for many common stacks. We will try the simplest 'maven-quickstart' archetype which is not very useful, but shows the idea.
 
     * Open DOS box in Eclipse workspace directory
     * execute: mvn archetype:generate
