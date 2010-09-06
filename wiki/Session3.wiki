@@ -29,6 +29,8 @@ Another way to generate an executable jarfile is to configure the maven-jar-plug
 </plugin>
 }}}
 
+Then just run 'mvn clean package' to generate the jarfile in the target directory.
+
 *Maven vs Eclipse*
 
 To set the correct (Maven) source directories and dependencies you have to run 'mvn eclipse:eclipse' in the project root and refresh the project in Eclipse (F5).
