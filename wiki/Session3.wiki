@@ -33,7 +33,7 @@ Another way to generate an executable jarfile is to configure the maven-jar-plug
 
 To set the correct (Maven) source directories and dependencies you have to run 'mvn eclipse:eclipse' in the project root and refresh the project in Eclipse (F5).
 
-Unit testing
+*Unit testing*
 
 Black box testing: start with the requirements and test a class based on your expectations. Do not look inside the class you are testing. Advantage: you don't get distracted by implementation details and make sure the requirements are met.
 
