@@ -1,17 +1,28 @@
 package nl.javasteam.carrental.swing;
 
+import java.awt.Color;
+
 import javax.swing.JPanel;
+
+import nl.javasteam.carrental.swing.vehicle.VehicleSearch;
 
 public class VehiclePanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
-	private VehicleHeader vehicleHeader;
+	private VehicleSearch vehicleSearch;
 	private VehicleTable vehicleTable;
 		
 	public VehiclePanel() {
-		vehicleHeader = new VehicleHeader();
+		setLayout(null);
+		setBackground(Color.gray);
+		
+		vehicleSearch = new VehicleSearch();
+		vehicleSearch.setBounds(5, 5, 900, 100);
+		
 		vehicleTable = new VehicleTable();
-		add(vehicleHeader);
+		vehicleTable.setBounds(5, 110, 900, 300);
+		
+		add(vehicleSearch);
 		add(vehicleTable);
 	}
 }
