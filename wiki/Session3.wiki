@@ -1,7 +1,7 @@
 #summary Summary of session three
 #labels summary
 
-How to make an executable jar
+*How to make an executable jar*
 
 To make new executable jarfile for the DotComBust game, from the project root do:
   jar cfe dotcomgame.jar nl.javasteam.dotcomgame.DotComBust -C target\classes .
@@ -13,7 +13,25 @@ You can run the jarfile with:
 
 Note that any class dependencies (Spring libraries etc.) the application has should either be contained within the jarfile, or should be provided separately and added to the classpath.
 
-If you checkout a project from the VCS (i.e. Subversion) there are Eclipse-specific artefacts like .classpath and .project present. To set the correct (Maven) source directories and dependencies you have to run 'mvn eclipse:eclipse' in the project root and refresh the project in Eclipse (F5).
+Another way to generate an executable jarfile is to configure the maven-jar-plugin in the pom.xml to add the Main-Class:
+
+{{{
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+	<configuration>
+		<archive>
+			<manifestEntries>
+				<Main-Class>nl.javasteam.dotcomgame.DotComBust</Main-Class>
+			</manifestEntries>
+		</archive>
+	</configuration>
+</plugin>
+}}}
+
+*Maven vs Eclipse*
+
+To set the correct (Maven) source directories and dependencies you have to run 'mvn eclipse:eclipse' in the project root and refresh the project in Eclipse (F5).
 
 Unit testing
 
