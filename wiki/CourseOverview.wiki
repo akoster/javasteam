@@ -83,17 +83,22 @@
         * check out existing company project and review it
 
 =Session 10=
-    * reading
-        * SCJP ch. 4 
-        * browse Maven book (see references)
-        * browse Stackoverflow.com
-        * Bouke: 
-           * read up on SCJP book
-           * read Sun code conventions 
-           * read other stuff mentioned in References
-    * practical:
-        * install development environment for Bouke
-        * fix broken build of existing project by installing and using Maven 2.0.9 instead of 2.2.1
-        * complete provided implementation of data layer in nl.javasteam.carrental.data
-        * complete VehicleServiceImpl (conversion of arguments)
-        * complete CarRental Swing UI based on UI flow design       
+    * continued saga of the broken build
+
+=Session 11=
+    * Anonymous inner class -> Inner class -> Top level class 
+    * Abstract class vs Interface
+    * ResourceBundle, how does it work? (via DocJar)
+    * Plan for reading options in a DefaultComboBoxModel
+    * Discussed Dependency Injection (D.I.) for Swing app (see 'Swing and Spring' in refererences for how NOT to do it)
+ 
+=Session 12=
+    * install Bouke's development environment    * 
+    * complete data layer in nl.javasteam.carrental.data
+    * complete VehicleServiceImpl (conversion of arguments)
+    * complete CarRental Swing UI based on UI flow design  
+        * ComboBox for weight selection (parse properties.getKeys())
+        * the rest...
+    * Solution for D.I. Maybe using AOP? (AKO)
+    
+    
