@@ -26,6 +26,8 @@ Examples:
   * [http://www.javapractices.com/topic/TopicAction.do?Id=215 constructors should not call overridable methods]
   * [http://stackoverflow.com/questions/3456177/calling-super-super-class-method calling a method in your super-super class]
 
+=Other=
+[http://java.dzone.com/news/spring-enabling-decoupled-swin Swing and Spring]
 
 =Testing=
   * [http://soapui.org/ SoapUI] for testing webservices
