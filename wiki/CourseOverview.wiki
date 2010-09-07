@@ -93,7 +93,7 @@
     * Discussed Dependency Injection (D.I.) for Swing app (see 'Swing and Spring' in refererences for how NOT to do it)
  
 =Session 12=
-    * install Bouke's development environment    * 
+    * install Bouke's development environment    
     * complete data layer in nl.javasteam.carrental.data
     * complete VehicleServiceImpl (conversion of arguments)
     * complete CarRental Swing UI based on UI flow design  
