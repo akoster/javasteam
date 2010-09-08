@@ -14,6 +14,9 @@ install Maven (2.2.1)
 install MySql (5.1.46)
   make sure there is a user called 'root' with an empty password
 
+A 'mvn clean package' should set everything straight and (create +) populate the carrental database. 
+
+===== PROBABLY OUTDATED BELOW =====
 in the project root run:
   mvn test
 a new database 'carrental' will be created in MySql
@@ -24,3 +27,4 @@ refresh in Eclipse; the classpath and source folders will be set correctly
 
 Populate database from commandline (until Spring version is upped):
 mysql carrental -u root -p < C:\dev\workspace\javasteam\src\main\resources\db\populateDB.txt
+====================================
