@@ -29,6 +29,7 @@ Examples:
 
 =Other=
 [http://java.dzone.com/news/spring-enabling-decoupled-swin Swing and Spring]
+[http://en.wikipedia.org/wiki/Object_composition UML - object composition]
 
 =Testing=
   * [http://soapui.org/ SoapUI] for testing webservices
