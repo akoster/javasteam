@@ -1,3 +1,7 @@
 #summary Summary of session twelve
 
 Downloaded Violet for creating an UML class diagram {See [References]}
+
+Created new scaffolding project
+
+Discussed domain model for Cube application
