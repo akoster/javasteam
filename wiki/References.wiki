@@ -4,13 +4,13 @@
 
   * [http://www.germane-software.com/~ser/R_n_R/subversion.html#N61 Subversion manual]
   * [http://www.sonatype.com/books/mvnex-book/reference/public-book.html Maven book]
-  * [http://docs.jboss.org/hibernate/stable/annotations/reference/en/html/entity.html Hibernate Entity mapping]
   * [http://www.cs.swarthmore.edu/~newhall/unixhelp/debuggingtips_Java.html Compiling and running Java programs]
   * [http://download.oracle.com/javase/tutorial/deployment/jar/index.html Packaging programs in JAR files]
   * [http://java.sun.com/docs/codeconv Sun code conventions]
   * [http://semver.org/ Semantic versioning]
   * [http://stackoverflow.com Stackoverflow] Software development Q & A site
   * [http://alexdp.free.fr/violetumleditor/page.php Violet UML editor]
+  * [http://www.docjar.com/ DocJar] for viewing library javadoc and source
 
 =Design=
 
@@ -39,7 +39,7 @@ Examples:
   * [http://www.eclemma.org code coverage] to find out which part of your code is touched by your tests
   * [http://mockito.googlecode.com/svn/branches/1.5/javadoc/org/mockito/Mockito.html Mockito] for easily setting up mock dependencies in unit tests
 
-=Java libraries=
+=Frameworks=
   * [http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html Swing]
   * [http://javablog.co.uk/2008/01/23/persistence-options-in-java-part-3-jpa JPA & Hibernate]
-  * [http://www.docjar.com/ DocJar] for viewing library javadoc and source
+  * [http://docs.jboss.org/hibernate/stable/annotations/reference/en/html/entity.html Hibernate Entity mapping]
