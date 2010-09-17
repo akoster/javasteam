@@ -94,6 +94,9 @@
  
 =Session 12=
     * install Bouke's development environment    
+    * new Cube application to understand Hibernate (and JPA, and Maven, and Spring)
+
+=Session 13=
     * complete data layer in nl.javasteam.carrental.data
     * complete VehicleServiceImpl (conversion of arguments)
     * complete CarRental Swing UI based on UI flow design  
