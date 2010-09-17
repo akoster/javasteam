@@ -4,6 +4,7 @@
 
   * [http://www.germane-software.com/~ser/R_n_R/subversion.html#N61 Subversion manual]
   * [http://www.sonatype.com/books/mvnex-book/reference/public-book.html Maven book]
+  * [http://docs.jboss.org/hibernate/stable/annotations/reference/en/html/entity.html Hibernate Entity mapping]
   * [http://www.cs.swarthmore.edu/~newhall/unixhelp/debuggingtips_Java.html Compiling and running Java programs]
   * [http://download.oracle.com/javase/tutorial/deployment/jar/index.html Packaging programs in JAR files]
   * [http://java.sun.com/docs/codeconv Sun code conventions]
