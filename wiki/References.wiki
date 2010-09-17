@@ -28,8 +28,8 @@ Examples:
   * [http://stackoverflow.com/questions/3456177/calling-super-super-class-method calling a method in your super-super class]
 
 =Other=
-[http://java.dzone.com/news/spring-enabling-decoupled-swin Swing and Spring]
-[http://en.wikipedia.org/wiki/Object_composition UML - object composition]
+  * [http://java.dzone.com/news/spring-enabling-decoupled-swin Swing and Spring]
+  * [http://en.wikipedia.org/wiki/Object_composition UML - object composition]
 
 =Testing=
   * [http://soapui.org/ SoapUI] for testing webservices
