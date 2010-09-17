@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	<mapping class="nl.javasteam.cube.domain.Color" />
+		<mapping class="nl.javasteam.cube.domain.Square" />
+		<mapping class="nl.javasteam.cube.domain.SideRotation" />
+		<mapping class="nl.javasteam.cube.domain.Side" />
+		<mapping class="nl.javasteam.cube.domain.CubeRotation" />
+		<mapping class="nl.javasteam.cube.domain.Cube" />
+	</session-factory>
+</hibernate-configuration>
