@@ -1,4 +1,5 @@
 #summary Summary of session twelve
+#labels summary
 
 Downloaded Violet for creating an UML class diagram {See [References]}
 
