@@ -1,4 +1,5 @@
 #summary Summary of session nine
+#labels summary
 
 Download and install JDK 5
 http://www.oracle.com/technetwork/java/archive-139210.html
