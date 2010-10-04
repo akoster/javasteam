@@ -1,4 +1,5 @@
 #summary Summary of session eight
+#labels summary
 
 Reviewed the code and build of an existing project. Discovered build issue (conflict with Maven version 2.2.1).
 
