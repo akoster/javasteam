@@ -16,21 +16,27 @@ public class CarRentalUserInterFace extends JFrame {
 	private MenuBar menuBar;
 
 	public CarRentalUserInterFace() {
+		
 		setTitle("CarRental");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		// You could use a Layoutmanager, for example:
+		// setLayout(new BorderLayout());
 		setLayout(null);
-		
+
 		menuBar = new MenuBar();
 		menuBar.setBounds(0, 0, 1000, 20);
+		// add(menuBar, BorderLayout.NORTH);
 		add(menuBar);
-		
+
 		tabsPane = new TabsPane();
 		tabsPane.setBounds(0, 25, 1000, 575);
 		add(tabsPane);
-		
+
 		pack();
 		setSize(1000, 600);
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
+	
 }
