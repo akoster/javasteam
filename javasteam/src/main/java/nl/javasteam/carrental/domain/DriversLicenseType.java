@@ -1,6 +1,5 @@
 package nl.javasteam.carrental.domain;
 
-import org.hibernate.annotations.TypeDef;
 
 /**
  * DriversLicenseTypes
