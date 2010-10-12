@@ -20,4 +20,5 @@ public interface CustomerDao extends BaseDao<Customer, Long> {
 	List<Customer> listCustomer(String code, String firstName, String lastName,
 			String homeAddress, int phoneNumber, int bankAccountNumber, Date birthDate,
 			Object driversLicense);
+	
 }
