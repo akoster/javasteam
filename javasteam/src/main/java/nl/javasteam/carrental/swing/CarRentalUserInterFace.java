@@ -1,5 +1,7 @@
 package nl.javasteam.carrental.swing;
 
+import java.awt.Toolkit;
+
 import javax.swing.JFrame;
 
 import nl.javasteam.carrental.swing.menu.MenuBar;
@@ -19,6 +21,8 @@ public class CarRentalUserInterFace extends JFrame {
 		
 		setTitle("CarRental");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		setIconImage(Toolkit.getDefaultToolkit().getImage("src\\main\\resources\\images\\car.gif"));
 
 		// You could use a Layoutmanager, for example:
 		// setLayout(new BorderLayout());
