@@ -41,11 +41,10 @@ public class CustomerDaoTest extends BaseTest {
 				.getTypes();
 
 		assertEquals(driversLicense.getTypes().size(), types.size());
-		System.out.println(types.size());
 
 		customer = customerDao.get(1L);
-		System.out.println(customer.getLastName());
+		System.out.println("Last name: " + customer.getLastName());
 		types = customer.getDriversLicense().getTypes();
-		System.out.println(types.size());
+		System.out.println("Number of types: " + types.size());
 	}
 }
