@@ -20,7 +20,7 @@ public class HibernateCustomerDao extends HibernateBaseDao<Customer, Long>
 	public List<Customer> listCustomer(String code, String firstName,
 			String lastName, String homeAddress, int phoneNumber,
 			int bankAccountNumber, Date birthDate, Object driversLicense) {
-		// TODO Auto-generated method stub
+			
 		return null;
 	}
 
