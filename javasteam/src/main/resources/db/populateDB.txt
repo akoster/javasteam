@@ -13,3 +13,4 @@ INSERT INTO driverslicense (id,acquisitionDate,number) VALUES (1,'1996-05-14 23:
 INSERT INTO driverslicense_types (driversLicense_id, element) VALUES (1,'DLA'), (1, 'DLB');
 
 INSERT INTO customer (id,bankAccountNumber,birthDate,code,firstName,homeAddress,lastName,phoneNumber,driversLicense_id) values (1,12345678,'1976-05-14 23:48:00',"See","Martijn","Boeing Avenue 236","Lapré","0202061049",1);
+INSERT INTO customer (id,bankAccountNumber,birthDate,code,firstName,homeAddress,lastName,phoneNumber,driversLicense_id) values (2,87654321,'1972-04-07 23:49:00',"Java","Adriaan","Voorbeeldstraat 1","Koster","0202061000",1);
