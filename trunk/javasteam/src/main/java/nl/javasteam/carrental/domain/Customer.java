@@ -24,7 +24,7 @@ public class Customer {
 	private String firstName;
 	private String lastName;
 	private String homeAddress;
-	private int phoneNumber;
+	private String phoneNumber;
 	private int bankAccountNumber;
 	private Date birthDate;
 	@OneToOne(cascade = CascadeType.ALL)
@@ -71,11 +71,11 @@ public class Customer {
 		this.homeAddress = homeAddress;
 	}
 		
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 	
-	public void setphoneNumber(int phoneNumber){
+	public void setphoneNumber(String phoneNumber){
 		this.phoneNumber = phoneNumber;
 	}
 	
