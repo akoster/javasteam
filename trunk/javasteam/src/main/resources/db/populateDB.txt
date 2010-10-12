@@ -14,3 +14,5 @@ INSERT INTO driverslicense_types (driversLicense_id, element) VALUES (1,'DLA'), 
 
 INSERT INTO customer (id,bankAccountNumber,birthDate,code,firstName,homeAddress,lastName,phoneNumber,driversLicense_id) values (1,12345678,'1976-05-14 23:48:00',"See","Martijn","Boeing Avenue 236","Lapré","0202061049",1);
 INSERT INTO customer (id,bankAccountNumber,birthDate,code,firstName,homeAddress,lastName,phoneNumber,driversLicense_id) values (2,87654321,'1972-04-07 23:49:00',"Java","Adriaan","Voorbeeldstraat 1","Koster","0202061000",1);
+
+INSERT INTO vehiclerentalcontract (id,code,depositAmountEuro,depositAmountPayed,endDate,startDate,customer_id,vehicle_id) values (1,"See",100,1,"2009-05-14 23:59:00","2011-05-14 23:59:00",1,2);
