@@ -106,3 +106,4 @@
     
     * Normalize data before storing in the database (car registration)
     * Display column headers in Swing UI
+    * Add validation to Swing UI
