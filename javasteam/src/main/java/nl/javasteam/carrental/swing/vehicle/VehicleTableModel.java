@@ -23,7 +23,7 @@ public class VehicleTableModel extends AbstractTableModel {
 	private enum Column {
 		LICENSE() {
 			Object getValue(Vehicle vehicle) {
-				return vehicle.getCode();
+				return vehicle.getRegistration();
 			}
 		},
 		DESCRIPTION() {
