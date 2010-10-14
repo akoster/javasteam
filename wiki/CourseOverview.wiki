@@ -104,4 +104,4 @@
         * the rest...
     * Solution for D.I. Maybe using AOP? (AKO)
     
-    
+    * Normalize data before storing in the database (car registration)
