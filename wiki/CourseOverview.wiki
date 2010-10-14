@@ -98,12 +98,16 @@
 
 =Session 13=
     * complete data layer in nl.javasteam.carrental.data
-    * complete VehicleServiceImpl (conversion of arguments)
     * complete CarRental Swing UI based on UI flow design  
         * ComboBox for weight selection (parse properties.getKeys())
+    * create VehicleRentalContractDao with find method using Hibernate criteria API
+    * create contract table and search in UI
+
+=Session 14=    
+    * complete VehicleServiceImpl (conversion of arguments)
+    * complete CarRental Swing UI
+        * Normalize data before storing in the database (car registration)
+        * Display column headers in Swing UI
+        * Add validation to Swing UI
         * the rest...
     * Solution for D.I. Maybe using AOP? (AKO)
-    
-    * Normalize data before storing in the database (car registration)
-    * Display column headers in Swing UI
-    * Add validation to Swing UI
