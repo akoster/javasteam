@@ -25,6 +25,7 @@
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
 		<property name="hibernateProperties">
 			<value>
+				hibernate.show_sql = ${hibernate.show_sql}
 				hibernate.dialect=org.hibernate.dialect.MySQLInnoDBDialect
 				hibernate.query.substitutions=true 'Y', false 'N'
 				hibernate.cache.use_second_level_cache=true
@@ -50,6 +51,11 @@
 
 	<bean id="customerDao"
 		class="nl.javasteam.carrental.data.hibernate.HibernateCustomerDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="vehicleRentalContractDao"
+		class="nl.javasteam.carrental.data.hibernate.HibernateVehicleRentalContractDao">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 

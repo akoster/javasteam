@@ -36,31 +36,36 @@ public class HibernateVehicleRentalContractDao extends
 			} catch (NumberFormatException e) {
 				// assume we have a customer name
 				String customerNameQuery = "%" + customerNameOrID.trim() + "%";
-				criteria.add(Restrictions.or(Restrictions.like(
-						"customer.firstName", customerNameQuery), Restrictions
-						.like("customer.lastName", customerNameQuery)));
+				criteria.createAlias("customer", "customer").add(
+						Restrictions.or(Restrictions.like("customer.firstName",
+								customerNameQuery), Restrictions.like(
+								"customer.lastName", customerNameQuery)));
 			}
 		}
 		// date filter
 		if (date != null) {
 			criteria.add(Restrictions.and(
-					Restrictions.ge("rentalPeriod.startDate", date),
-					Restrictions.le("rentalPeriod.endDate", date)));
+					Restrictions.le("rentalPeriod.startDate", date),
+					Restrictions.ge("rentalPeriod.endDate", date)));
 		}
 
 		// vehicleDescriptionOrRegistration filter
-		if (vehicleDescriptionOrRegistration != null) {
-			String registrationQuery = "%" + Vehicle.normalizeRegistration(vehicleDescriptionOrRegistration) + "%";
-			String descriptionQuery = "%" + vehicleDescriptionOrRegistration.trim() + "%";
+		if (vehicleDescriptionOrRegistration != null
+				&& vehicleDescriptionOrRegistration.length() > 0) {
+			String registrationQuery = "%"
+					+ Vehicle
+							.normalizeRegistration(vehicleDescriptionOrRegistration)
+					+ "%";
+			String descriptionQuery = "%"
+					+ vehicleDescriptionOrRegistration.trim() + "%";
 
-			criteria.add(Restrictions.or(
-					Restrictions.like("vehicle.registration", registrationQuery),
-					Restrictions.like("vehicle.description", descriptionQuery)));
+			criteria.createAlias("vehicle", "vehicle").add(
+					Restrictions.or(Restrictions.like("vehicle.registration",
+							registrationQuery), Restrictions.like(
+							"vehicle.description", descriptionQuery)));
 		}
 
-		List<VehicleRentalContract> contracts = getHibernateTemplate().find(
-				"from VehicleRentalContract where id = ? ",
-				new Object[] { contractID });
+		List<VehicleRentalContract> contracts = criteria.list();
 		return contracts;
 	}
 }

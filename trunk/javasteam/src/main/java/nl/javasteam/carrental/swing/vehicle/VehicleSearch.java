@@ -1,7 +1,6 @@
 package nl.javasteam.carrental.swing.vehicle;
 
 
-import java.util.Collections;
 import java.util.Enumeration;
 import java.util.ResourceBundle;
 
