@@ -1,6 +1,5 @@
 package nl.javasteam.carrental.data;
 
-import java.util.Date;
 import java.util.List;
 
 import nl.javasteam.carrental.domain.Customer;
@@ -17,8 +16,6 @@ public interface CustomerDao extends BaseDao<Customer, Long> {
 	// --Update customer
 	// --List all customers
 
-	List<Customer> listCustomer(String code, String firstName, String lastName,
-			String homeAddress, int phoneNumber, int bankAccountNumber, Date birthDate,
-			Object driversLicense);
+	List<Customer> list(Long customerID, String customerName);
 	
 }
