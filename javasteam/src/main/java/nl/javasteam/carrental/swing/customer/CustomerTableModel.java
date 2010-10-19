@@ -1,5 +1,8 @@
 package nl.javasteam.carrental.swing.customer;
 
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
@@ -7,28 +10,31 @@ import javax.swing.table.AbstractTableModel;
 import nl.javasteam.carrental.data.CustomerDao;
 import nl.javasteam.carrental.domain.Customer;
 import nl.javasteam.carrental.swing.App;
+import nl.javasteam.carrental.swing.contract.ContractSearch;
 
 /**
  * @author mlapre
- *
+ * 
  */
-public class CustomerTableModel extends AbstractTableModel {
+public class CustomerTableModel extends AbstractTableModel implements
+		ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	private static final String[] columns = { "Code", "HomeAddress","phoneNumber"};
-	
+	private static final String[] columns = { "Code", "HomeAddress",
+			"phoneNumber" };
+
 	private List<Customer> customers;
-	private CustomerDao customerDao = (CustomerDao) App.APP_CONTEXT.getBean("customerDao");
-	
+	private CustomerDao customerDao = (CustomerDao) App.APP_CONTEXT
+			.getBean("customerDao");
+
 	public CustomerTableModel() {
 		customers = customerDao.getAll();
 	}
 
-	
 	public int getColumnCount() {
 		return columns.length;
 	}
-	
+
 	public int getRowCount() {
 		return customers.size();
 	}
@@ -37,7 +43,7 @@ public class CustomerTableModel extends AbstractTableModel {
 	public String getColumnName(int col) {
 		return columns[col].toString();
 	}
-	
+
 	public Object getValueAt(int row, int col) {
 		switch (col) {
 		case 0:
@@ -48,8 +54,16 @@ public class CustomerTableModel extends AbstractTableModel {
 			return customers.get(row).getPhoneNumber();
 		default:
 			break;
-		}		
+		}
 		return null;
+	}
+
+	public void actionPerformed(ActionEvent event) {
+		CustomerSearch customerSearch = (CustomerSearch) ((Component) event
+				.getSource()).getParent();
+		customers = customerDao.list(customerSearch.getCustomerID(),
+				customerSearch.getCustomer());
+		super.fireTableDataChanged();
 	}
 
 }
