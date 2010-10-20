@@ -2,11 +2,11 @@ INSERT INTO vehiclepolicy (id, minimumAgeYears ,minimumDriversExperienceYears,ve
 INSERT INTO vehiclepolicy (id, minimumAgeYears ,minimumDriversExperienceYears,vehicleType) VALUES (2, 18, 2, 'VAN');
 INSERT INTO vehiclepolicy (id, minimumAgeYears ,minimumDriversExperienceYears,vehicleType) VALUES (3, 20, 3, 'TRUCK');
 
-INSERT INTO vehicle (id,description,depthCentimeters,heightCentimeters,widthCentimeters,registration,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (1,'Peugot 205', 0, 0, 0, '23-SEE-45', 500, 70, 1);
+INSERT INTO vehicle (id,description,depthCentimeters,heightCentimeters,widthCentimeters,registration,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (1,'Peugot 205', 0, 0, 0, '23-SEE-45', 1001, 70, 1);
 INSERT INTO vehicle (id,description,depthCentimeters,heightCentimeters,widthCentimeters,registration,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (2,'Nissan Almera', 0, 0, 0, 'AB-42-CD', 400, 80, 1);
 INSERT INTO vehicle (id,description, depthCentimeters,heightCentimeters,widthCentimeters,registration,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (3,'Ford Ka', 0, 0, 0, '75-HH-PP', 300, 60, 1);
 INSERT INTO vehicle (id,description,depthCentimeters,heightCentimeters,widthCentimeters,registration,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (4,'Citroen Xsara', 0, 0, 0, '78-AHH-28', 350, 90, 1);
-INSERT INTO vehicle (id,description,depthCentimeters,heightCentimeters,widthCentimeters,registration,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (5,'Volkswagen polo', 0, 0, 0, '25-JD-FZ', 420, 85, 1);
+INSERT INTO vehicle (id,description,depthCentimeters,heightCentimeters,widthCentimeters,registration,maxCargoWeightKilogram,rentalPricePerDayEuro,vehiclePolicy_id) VALUES (5,'Volkswagen polo', 0, 0, 0, '25-JD-FZ', 5001, 85, 1);
 
 INSERT INTO driverslicense (id,acquisitionDate,number) VALUES (1,'1996-05-14 23:59:00',01234567890);
 
