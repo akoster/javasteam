@@ -7,6 +7,7 @@ import nl.javasteam.carrental.swing.contract.ContractPanel;
 import nl.javasteam.carrental.swing.customer.CustomerPanel;
 import nl.javasteam.carrental.swing.vehicle.VehiclePanel;
 
+
 /**
  * Tabs for the user interface
  * 

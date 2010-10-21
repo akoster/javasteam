@@ -1,6 +1,8 @@
 package nl.javasteam.carrental.swing.vehicle;
 
-import java.io.Console;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -9,12 +11,14 @@ import javax.swing.table.AbstractTableModel;
 import nl.javasteam.carrental.data.VehicleDao;
 import nl.javasteam.carrental.domain.Vehicle;
 import nl.javasteam.carrental.swing.App;
+import nl.javasteam.carrental.swing.customer.CustomerSearch;
 
 /**
  * @author mlapre
  * 
  */
-public class VehicleTableModel extends AbstractTableModel {
+public class VehicleTableModel extends AbstractTableModel implements
+		ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private static final ResourceBundle bundle = ResourceBundle
@@ -65,6 +69,13 @@ public class VehicleTableModel extends AbstractTableModel {
 
 	public Object getValueAt(int row, int col) {
 		return Column.values()[col].getValue(vehicles.get(row));
+	}
+
+	public void actionPerformed(ActionEvent event) {
+		VehicleSearch vehicleSearch = (VehicleSearch) ((Component) event
+				.getSource()).getParent();
+		//vehicles = vehicleDao.listAvailable(vehicleSearch.getFromDate(), vehicleSearch.getTodate(), vehicleSearch.getWeight(), vehicleSearch.getDepthCentimeters(), vehicleSearch.getHeightCentimeters(), vehicleSearch.getWidthCentimeters(), vehicleSearch.getRegistration());
+		super.fireTableDataChanged();		
 	}
 
 }

@@ -10,7 +10,6 @@ import javax.swing.table.AbstractTableModel;
 import nl.javasteam.carrental.data.CustomerDao;
 import nl.javasteam.carrental.domain.Customer;
 import nl.javasteam.carrental.swing.App;
-import nl.javasteam.carrental.swing.contract.ContractSearch;
 
 /**
  * @author mlapre
