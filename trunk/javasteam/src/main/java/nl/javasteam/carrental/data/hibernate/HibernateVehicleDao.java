@@ -38,6 +38,7 @@ public class HibernateVehicleDao extends HibernateBaseDao<Vehicle, Long>
 		Criteria criteria = getSession().createCriteria(Vehicle.class);
 
 		// date filter
+		// TODO Still can't make this work
 		if (fromDate != null && toDate != null) {
 			criteria.createAlias("vehiclerentalcontract",
 					"vehiclerentalcontract").add(
