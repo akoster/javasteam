@@ -74,8 +74,15 @@ public class VehicleTableModel extends AbstractTableModel implements
 	public void actionPerformed(ActionEvent event) {
 		VehicleSearch vehicleSearch = (VehicleSearch) ((Component) event
 				.getSource()).getParent();
-		//vehicles = vehicleDao.listAvailable(vehicleSearch.getFromDate(), vehicleSearch.getTodate(), vehicleSearch.getWeight(), vehicleSearch.getDepthCentimeters(), vehicleSearch.getHeightCentimeters(), vehicleSearch.getWidthCentimeters(), vehicleSearch.getRegistration());
-		super.fireTableDataChanged();		
+		vehicles = vehicleDao.listAvailable(vehicleSearch.getFromDate(),
+				vehicleSearch.getTodate(), vehicleSearch.getWeight(),
+				vehicleSearch.getDepthCentimeters(),
+				vehicleSearch.getHeightCentimeters(),
+				vehicleSearch.getWidthCentimeters(),
+				vehicleSearch.getRegistration(),
+				vehicleSearch.getMinPrice(),
+				vehicleSearch.getMaxPrice());
+		super.fireTableDataChanged();
 	}
 
 }
