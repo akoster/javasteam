@@ -1,9 +1,5 @@
 package nl.javasteam.carrental.swing.vehicle;
 
-import java.awt.event.InputMethodEvent;
-import java.awt.event.InputMethodListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.ResourceBundle;
@@ -52,7 +48,7 @@ public class VehicleSearch extends JPanel {
 	private Integer maxPrice = new Integer(100);
 	private Integer maxPriceIncreased = new Integer(0);
 	private Integer maxPriceBoundUp = new Integer(0);
-	private Integer step = new Integer(1);	
+	private Integer step = new Integer(1);
 
 	public class Option {
 		int min;
@@ -136,20 +132,21 @@ public class VehicleSearch extends JPanel {
 
 		textFieldRegistration = new JTextField();
 		textFieldRegistration.setBounds(536, 2, 150, 20);
-		
 
 		try {
-			maxPrice = Integer.parseInt(bundle.getString("SEARCH_TEXT_DEFAULT_VALUE"));
+			maxPrice = Integer.parseInt(bundle
+					.getString("SEARCH_TEXT_DEFAULT_VALUE"));
 			maxPriceBoundUp = maxPrice + 100;
 		} catch (NumberFormatException e) {
 			maxPrice = 100;
 		}
-		
-		PriceBoundmodel = new SpinnerNumberModel(maxPrice, minPrice, maxPriceBoundUp, step);
+
+		PriceBoundmodel = new SpinnerNumberModel(maxPrice, minPrice,
+				maxPriceBoundUp, step);
 		jSpinnerPriceBounds = new JSpinner(PriceBoundmodel);
-		jSpinnerPriceBounds.setBounds(693, 36, 50, 20);	
+		jSpinnerPriceBounds.setBounds(693, 36, 50, 20);
 		jSpinnerPriceBounds.addChangeListener(new PriceBoundsActionChanged());
-		
+
 		jSliderMinPrice = new JSlider(0, 100, 0);
 		jSliderMinPrice.setBounds(461, 36, 115, 20);
 		jSliderMinPrice.addChangeListener(new MinAmountChangeAction());
@@ -193,33 +190,37 @@ public class VehicleSearch extends JPanel {
 		add(jSpinnerPriceBounds);
 		add(jSliderMinPrice);
 		add(jLabelMinPrice);
-		add(jLabelMinPriceSelected);		
+		add(jLabelMinPriceSelected);
 		add(jSliderMaxPrice);
 		add(jLabelMaxPrice);
 		add(jLabelMaxPriceSelected);
 		add(jButtonVehicleSearch);
 	}
-	
+
 	public class PriceBoundsActionChanged implements ChangeListener {
 
 		public void stateChanged(ChangeEvent e) {
-			jSliderMinPrice.setMaximum((Integer) jSpinnerPriceBounds.getValue());
-			jSliderMaxPrice.setMaximum((Integer) jSpinnerPriceBounds.getValue());
-			
+			jSliderMinPrice
+					.setMaximum((Integer) jSpinnerPriceBounds.getValue());
+			jSliderMaxPrice
+					.setMaximum((Integer) jSpinnerPriceBounds.getValue());
+
 			maxPriceIncreased = (Integer) jSpinnerPriceBounds.getValue();
 			maxPrice = (Integer) jSpinnerPriceBounds.getValue() + 100;
 			maxPriceIncreased = (Integer) jSpinnerPriceBounds.getValue();
-			PriceBoundmodel = new SpinnerNumberModel(maxPriceIncreased, minPrice, maxPrice, step);
+			PriceBoundmodel = new SpinnerNumberModel(maxPriceIncreased,
+					minPrice, maxPrice, step);
 			jSpinnerPriceBounds.setModel(PriceBoundmodel);
 		}
 	}
-	
+
 	public class MinAmountChangeAction implements ChangeListener {
-		public void stateChanged(ChangeEvent e) {			
+		public void stateChanged(ChangeEvent e) {
 			jLabelMinPriceSelected.setText(Integer.toString(jSliderMinPrice
 					.getValue()));
-			if(jSliderMinPrice.getValue() > jSliderMaxPrice.getValue()){
-				jLabelMaxPriceSelected.setText(Integer.toString(jSliderMinPrice.getValue()));
+			if (jSliderMinPrice.getValue() > jSliderMaxPrice.getValue()) {
+				jLabelMaxPriceSelected.setText(Integer.toString(jSliderMinPrice
+						.getValue()));
 				jSliderMaxPrice.setValue(jSliderMinPrice.getValue());
 			}
 		}
@@ -229,8 +230,9 @@ public class VehicleSearch extends JPanel {
 		public void stateChanged(ChangeEvent e) {
 			jLabelMaxPriceSelected.setText(Integer.toString(jSliderMaxPrice
 					.getValue()));
-			if(jSliderMaxPrice.getValue() < jSliderMinPrice.getValue()){
-				jLabelMinPriceSelected.setText(Integer.toString(jSliderMaxPrice.getValue()));
+			if (jSliderMaxPrice.getValue() < jSliderMinPrice.getValue()) {
+				jLabelMinPriceSelected.setText(Integer.toString(jSliderMaxPrice
+						.getValue()));
 				jSliderMinPrice.setValue(jSliderMaxPrice.getValue());
 			}
 		}
@@ -244,33 +246,36 @@ public class VehicleSearch extends JPanel {
 		return dateChooserToDate.getDate();
 	}
 
-	public Integer[] getWeight() throws Exception {
+	public Integer[] getWeight() {
 
 		Integer minWeight = 0;
 		Integer maxWeight = 0;
+		Integer[] result = new Integer[2];
 
-		@SuppressWarnings("rawtypes")
-		Enumeration keys = bundle.getKeys();
-		while (keys.hasMoreElements()) {
-			String key = (String) keys.nextElement();
-			if (key.contains("SEARCH_COMBO_WEIGHT_OPTIONS_")) {
-				System.out.println("Key " + key);
-				String[] values = bundle.getString(key).split(",");
-				System.out.println("Value 0 " + values[0].toString());
-				System.out.println("Value 1 " + values[1].toString());
-				System.out.println("Value 2 " + values[2].toString());
-				if (values[2].toString().equals(
-						weightList.getSelectedItem().toString())) {
-					minWeight = Integer.parseInt(values[0]);
-					maxWeight = Integer.parseInt(values[1]);
-					Integer[] result = { minWeight, maxWeight };
-					return result;
+		try {
+
+			@SuppressWarnings("rawtypes")
+			Enumeration keys = bundle.getKeys();
+			while (keys.hasMoreElements()) {
+				String key = (String) keys.nextElement();
+				if (key.contains("SEARCH_COMBO_WEIGHT_OPTIONS_")) {
+					String[] values = bundle.getString(key).split(",");
+					if (values[2].toString().equals(
+							weightList.getSelectedItem().toString())) {
+						minWeight = Integer.parseInt(values[0]);
+						maxWeight = Integer.parseInt(values[1]);
+						result[0] = minWeight;
+						result[1] = maxWeight;
+					}
 				}
 			}
+		} catch (Exception e) {
+			System.out
+					.println("No SEARCH_COMBO_WEIGHT_OPTIONS_ that matches with the chosen weight option!");
+			result = null;
 		}
-		throw new Exception(
-				"No SEARCH_COMBO_WEIGHT_OPTIONS_ that matches with the chosen weight option!");
 
+		return result;
 	}
 
 	public Integer getDepthCentimeters() {
@@ -297,7 +302,23 @@ public class VehicleSearch extends JPanel {
 		}
 	}
 
+	public Integer getMinPrice() {
+		return jSliderMinPrice.getValue();
+	}
+
+	public Integer getMaxPrice() {
+		return jSliderMaxPrice.getValue();
+	}
+
 	public String getRegistration() {
 		return textFieldRegistration.getText();
+	}
+
+	public Integer getMinWeight() {		
+		return jSliderMinPrice.getValue();
+	}
+
+	public Integer getMaxWeight() {		
+		return jSliderMaxPrice.getValue();
 	}
 }
