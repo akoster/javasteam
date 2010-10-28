@@ -41,6 +41,7 @@ Examples:
 
 =Frameworks=
   * [http://download.oracle.com/docs/cd/E17476_01/javase/1.5.0/docs/api/javax/swing/JFrame.html Swing]
+    * [http://stackoverflow.com/questions/1140303/java-swing-range-slider-u-i MultiSlider]
   * [http://javablog.co.uk/2008/01/23/persistence-options-in-java-part-3-jpa JPA & Hibernate]
   * [http://docs.jboss.org/hibernate/stable/annotations/reference/en/html/entity.html Hibernate Entity mapping]
   * [http://www.javalobby.org/articles/hibernatequery102/ hibernate criteria API]
