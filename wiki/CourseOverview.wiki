@@ -104,10 +104,16 @@
     * create contract table and search in UI
 
 =Session 14=    
-    * complete VehicleServiceImpl (conversion of arguments)
-    * complete CarRental Swing UI
-        * Normalize data before storing in the database (car registration)
-        * Display column headers in Swing UI
-        * Add validation to Swing UI
-        * the rest...
-    * Solution for D.I. Maybe using AOP? (AKO)
+    * completed CarRental Swing UI: the customer, vehicle and contract search panels and 
+data tables
+    * tested UI and documented found issues/feature requests in doc/carrental/TODO.txt
+    * refactored VehicleSearch c.s. Properties file was read for every search, which was not necessary. 
+    * Replaced return type Integer[] with the WeightRange class for clearer typing of the API. 
+    * renamed fields and property keys, introduced constants for keys, refactored fields to local variable where possible, etc.
+
+=remaining issues=
+    * Currently the Swing UI communicates directly with the DAO's. The intention of the architecture was to separate the data layer from the frontend by a business layer consisting of services. We still need to implement those (an example is the VehicleService which is partially implemented) and make sure the frontend ONLY refers to services, not to DAO's. Reason for this is that the services can hide the low-level API of the DAO's from the frontend code, offering a higher-level API, and encapsulate business logic like normalization, transformations (for example transform customer.birthDate to age), validation (insofar not implemented in the frontend), authorization or other business rules.
+    * solve the issues specified in doc/carrental/TODO.txt
+    * Normalize data before storing in the database (car registration)
+    * Add validation to Swing UI
+    * The Swing components currently look up their dependencies directly in the Spring context wrapper offered by the App class. It would be better if the dependencies were injected in these components, however to make all Swing components beans in the Spring context seems unfeasible. We still need a practical way to inject dependencies in Swing components.
