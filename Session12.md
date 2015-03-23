@@ -1,0 +1,27 @@
+Downloaded Violet for creating an UML class diagram {See [References](References.md)}
+
+Discussed domain model for Cube application
+
+Created new scaffolding project using mvn archetype:generate
+
+Created classes for Cube domain
+
+Annotated domain classses with JPA and hibernate annotations
+
+Added hibernate dependencies and plugin to pom.xml
+
+Created hibernate.cfg.xml and jdbc.properties files
+
+Generated database with maven hibernate3 plugin
+
+Added spring dependencies to pom.xml
+
+Created spring context file
+
+Created DAO using Generic HibernateBaseDao and Spring HibernateDaoSupport
+
+Waited until Bouke stopped crying his eyes out
+
+Created Java application which creates a Cube and persists it
+
+Looked in the database and rejoiced!

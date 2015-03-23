@@ -1,0 +1,70 @@
+**Domain entities**
+
+Vehicle
+  * maximum cargo weight in kilograms
+  * dimensions of cargo space (width x depth x height) in centimeters
+  * rental price per day in euro's
+
+VehiclePolicy
+  * vehicle type (car, van, truck)
+  * allowed driver's license types (subset of A, B, C, D, E)
+  * minimum age
+  * minimum years of driving experience
+
+Customer
+  * first name
+  * last name
+  * home address
+  * phone number
+  * bank account number
+  * birth date
+  * driver's license types, number and acquisition date
+
+VehicleRentalContract
+  * vehicle
+  * customer
+  * rental period
+  * deposit amount in euro
+  * is deposit payed y/n
+
+**Use cases**
+
+Vehicle maintenance
+  * Enter new vehicle
+  * Find vehicle by id
+  * Update vehicle
+  * List all vehicles
+  * List available vehicles by customer criteria:
+    * rental period
+    * minimum cargo weight
+    * minimum cargo space
+    * maximum rental price
+    * driver's license type
+    * driver's age
+    * driver's years of driving experience
+
+VehiclePolicy maintenance
+  * Enter new vehicle policy
+  * Find vehicle policy by id
+  * Update vehicle policy
+  * List all vehicle policies
+
+Customer maintenenance
+  * Enter new customer
+  * Find customer by id
+  * Update customer
+  * List all customers
+  * List customers by (partial) name
+
+Contract maintenance
+  * Enter new contract
+  * Find contract by id
+  * Update contract
+  * List all contracts
+  * List contracts by customer id
+  * List all contracts with a rental period containing a given date
+
+
+**User Interface**
+
+<img src='http://javasteam.googlecode.com/svn/trunk/javasteam/doc/carrental/CarRental_UI_flow_design.jpg' />

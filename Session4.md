@@ -1,0 +1,17 @@
+discussion about OO-design:
+
+  * straight subclassing should be generally avoided because it creates a tight coupling between classes, which usually breaks up when requirements shift
+  * as an alternative you can use 'collaborators'. Example: VehiclePolicy wraps the policy-related fields of Vehicle, representing the data needed to apply business rules to Vehicles. This keeps the Vehicle class cleaner.
+  * Sometimes time-proven patterns can offer solutions for OO design questions. The Decorator pattern allows chaining of different behaviors on a fixed interface. See the nl.javasteam.patterns.decorator package for an example.
+  * patterns can be hard to grasp and apply in the beginning. When we encounter situations where a pattern applies, we will look into them.
+
+the car rental class diagram has been finalized (until the next change of course). We won't make separate sub classes for car, van and truck, but represent the vehicle type within the VehiclePolicy class; there will be exactly one VehiclePolicy per vehicle type.
+
+packaging of components of the car rental application are:
+  * nl.javasteam.carrental.domain : for the domain model classes (class diagram so far)
+  * nl.javasteam.carrental.service : the service layer with business logic
+  * nl.javasteam.carrental.data : the data access layer
+  * nl.javasteam.carrental.swing : the Swing UI
+  * nl.javasteam.carrental.web : The web application
+
+For the user interface we will start off with a Swing UI. Later the web app will be added. The data layer will use annotated domain classes and maven hibernate plugin to generate a physical database in MySql. for the Service layer there are no concrete requirements yet; these will be determined later on.

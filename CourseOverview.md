@@ -1,0 +1,117 @@
+# Books #
+  * Head first Java 2nd edition, Kathy Sierra & Bert Bates, February 2005, O’Reilly
+  * SCJP Sun Certified Programmer for Java 5 Study Guide (Exam 310-055), Kathy Sierra & Bert Bates, McGraw-Hill/Osborne
+
+# Downloads #
+  * Java: JDK SE 6 (http://java.sun.com/javase/downloads)
+  * IDE: Eclipse for Java Developers (http://www.eclipse.org/downloads/)
+  * Version control: Subclipse (http://subclipse.tigris.org/)
+  * Build: Maven2 (http://maven.apache.org/download.html)
+
+# Session 1 #
+  * reading
+    * SCJP ch. 10 ‘Development’ behalve 7.1 (static imports)
+    * HFJ ch. 1 ‘Quick dip’ (p.1 - 26)
+  * practical
+    * Install development tools
+    * Create new Eclipse project with mvn archetype:generate
+    * Create Hello world Java application
+    * Check project into Subversion (https://javasteam.googlecode.com/svn/trunk/)
+
+# Session 2 #
+  * reading
+    * SCJP ch. 1 & 2 skimmen
+    * HFJ ch. 5
+  * practical
+    * Create SimpleDotCom game
+    * Add the bug found in the GoogleCode issue tracker
+    * Convert the SimpleDotComTestDrive class to a JUnit test case
+
+# Session 3 #
+  * reading
+    * HFJ ch. 6
+  * practical
+    * Create the full DotComBust game
+    * Create a class diagram for the CarRental CRM application using the requirements given in the Wiki
+    * Unit testing continued, black/white box, code coverage, mocking
+
+# Session 4 #
+  * reading
+    * SCJP ch. 3
+    * Browse Pattern references
+  * practical
+    * Further flesh out class diagram of CarRental
+    * Create classes and JavaDoc matching the class diagram
+    * Apply design patterns where useful (see references)
+
+# Session 5 #
+  * reading
+    * Browse Swing API
+  * practical
+    * implement CarRental domain classes in nl.javasteam.carrental.domain
+    * add JPA/Hibernate annotations and generate database ddl using maven hibernate3 plugin
+    * Add log4j dependency in pom.xml and configure log4j logging
+    * write a unit test for a service using Mockito to mock the DAO dependency
+
+# Session 6 #
+  * reading
+    * -
+  * practical:
+    * build basic Swing UI for Vehicle and VehiclePolicy maintenance in nl.javasteam.carrental.swing
+
+# Session 7 #
+  * reading
+    * Read 'Constructors shouldn't call overridables': http://www.javapractices.com/topic/TopicAction.do?Id=215
+  * practical:
+    * overview of course so far
+    * discuss 'Constructors shouldn't call overridables', see nl.javasteam.antipatterns.constructor
+
+# Session 8 #
+  * reading
+    * -
+  * practical
+    * fixed configuration issues in CarRental
+    * complete UI workflow and screen design
+    * check out existing project and review it
+
+# Session 9 #
+  * reading
+    * -
+  * practical:
+    * check out existing company project and review it
+
+# Session 10 #
+  * continued saga of the broken build
+
+# Session 11 #
+  * Anonymous inner class -> Inner class -> Top level class
+  * Abstract class vs Interface
+  * ResourceBundle, how does it work? (via DocJar)
+  * Plan for reading options in a DefaultComboBoxModel
+  * Discussed Dependency Injection (D.I.) for Swing app (see 'Swing and Spring' in refererences for how NOT to do it)
+
+# Session 12 #
+  * install Bouke's development environment
+  * new Cube application to understand Hibernate (and JPA, and Maven, and Spring)
+
+# Session 13 #
+  * complete data layer in nl.javasteam.carrental.data
+  * complete CarRental Swing UI based on UI flow design
+    * ComboBox for weight selection (parse properties.getKeys())
+  * create VehicleRentalContractDao with find method using Hibernate criteria API
+  * create contract table and search in UI
+
+# Session 14 #
+  * completed CarRental Swing UI: the customer, vehicle and contract search panels and
+data tables
+  * tested UI and documented found issues/feature requests in doc/carrental/TODO.txt
+  * refactored VehicleSearch c.s. Properties file was read for every search, which was not necessary.
+  * Replaced return type Integer[.md](.md) with the WeightRange class for clearer typing of the API.
+  * renamed fields and property keys, introduced constants for keys, refactored fields to local variable where possible, etc.
+
+# remaining issues #
+  * Currently the Swing UI communicates directly with the DAO's. The intention of the architecture was to separate the data layer from the frontend by a business layer consisting of services. We still need to implement those (an example is the VehicleService which is partially implemented) and make sure the frontend ONLY refers to services, not to DAO's. Reason for this is that the services can hide the low-level API of the DAO's from the frontend code, offering a higher-level API, and encapsulate business logic like normalization, transformations (for example transform customer.birthDate to age), validation (insofar not implemented in the frontend), authorization or other business rules.
+  * solve the issues specified in doc/carrental/TODO.txt
+  * Normalize data before storing in the database (car registration)
+  * Add validation to Swing UI
+  * The Swing components currently look up their dependencies directly in the Spring context wrapper offered by the App class. It would be better if the dependencies were injected in these components, however to make all Swing components beans in the Spring context seems unfeasible. We still need a practical way to inject dependencies in Swing components.

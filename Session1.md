@@ -1,0 +1,45 @@
+Install java 6 JDK
+
+Install Eclipse Galileo (3.5)
+
+Install Subclipse plugin
+  * in Help -> Install new software
+  * Add site Subclipse 1.6 - http://subclipse.tigris.org/update_1.6.x
+  * Select subclipse module and accept all defaults
+  * Go to SVN repository exploring perspective
+
+JavaSteam google code project
+  * Add user to project on http://code.google.com/p/javasteam/
+  * Generate googlecode password for user on Source -> Checkout tab
+  * Add repository https://javasteam.googlecode.com/svn (refers to JavaSteam Google code project)
+
+Install Maven 2.0.9
+  * Add system environment variable MAVEN\_HOME pointing to maven install directory
+  * Add %MAVEN\_HOME%\bin to system path
+
+Creating a new project
+
+One way to do this is to use the Maven archectype plugin. This offers a fast way to generate a default project setup for many common stacks. We will try the simplest 'maven-quickstart' archetype which is not very useful, but shows the idea.
+
+  * Open DOS box in Eclipse workspace directory
+  * execute: mvn archetype:generate
+  * Select maven-quickstart archetype and answer questions, this generates a simple project structure. If you are not sure about the answers, please see the [relevant chapter](http://www.sonatype.com/books/mvnex-book/reference/simple-project-sect-create-simple.html) in the Maven book (in the [References](References.md))
+  * change to new generated directory in the workspace directory
+  * execute: mvn eclipse:eclipse, this generates .project & .classpath for Eclipse
+  * import project into Eclipse: File -> Import -> Existing projects into the Workspace -> browse to the generated root directory
+  * Configure build path -> Add variable M2\_REPO = [YOUR\_HOME\_DIR](YOUR_HOME_DIR.md)\.m2\repository. This is needed to tell Eclipse where to find the dependencies managed by maven. You might need to do a clean project and/or refresh in Eclipse.
+
+Checking a project into Subversion
+
+Here's how you can check your project into SVN. This creates an indelible entry in the SVN repository you are using so don't check in unless you really want to put it under version control.
+
+  * Right-clicl on the project -> Team -> Share project
+  * Choose SVN (not CVS)
+  * Choose our google code repository (or the repo you want to use)
+  * If you don't know the common SVN directory structure, read the [relevant part](http://www.germane-software.com/~ser/R_n_R/subversion.html#N61) of the SVN manual (see [References](References.md))
+  * Eclipse switches to Team synchronization perspective
+  * Remove from view: target, .project, .classpath and .settings (these are Eclipse specific/generated artefacts which we don't want in our code repository)
+  * Commit and enter a comment
+  * Switch to Java perspective
+  * svn:ignore the files not committed above
+  * Commit the svn:ignore (this is a Subversion property on a directory)

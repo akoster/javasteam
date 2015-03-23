@@ -1,0 +1,15 @@
+explained about maven archetypes. Generated appfuse-struts archetype and viewed all the generated stuff:
+  * maven hibernate plugin which generates DDL from annotated entity classes
+  * tree with Struts artefacts and web app config
+  * etc.
+
+Dependency injection (D.I.): get your DAO from someone else instead of obtaining it yourself.
+
+How to write a JUnit test. Use D.I. and a mock framework (like Mockito) to set a mock DAO on the service you are testing. The mock framework enables you to provide the desired behavior of the mock and verify if the expected methods are called on it by the class you are testing.
+
+Introduced the Gang of Four (GoF) design patterns. For example Singleton, Abstract factory and Decorator. Shown example of decorator:
+  * in Java API: java.io package (streams)
+  * own example: nl.javasteam.patterns.decorator which demonstrates a 'pluggable' calculator.
+Patterns are useful in the communcation about software design, and offer time-proven approaches to common problems.
+
+Discussed the references article "Constructors shouldn't call overridables".

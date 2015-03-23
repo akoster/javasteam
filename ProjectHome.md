@@ -1,0 +1,1 @@
+Crash Java course in fourteen sessions, covering basic development methodologies (unit testing, continuous integration), object-oriented design and enterprise frameworks like Maven, Spring and JPA/Hibernate.

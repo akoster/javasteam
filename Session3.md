@@ -1,0 +1,45 @@
+**How to make an executable jar**
+
+To make new executable jarfile for the DotComBust game, from the project root do:
+> jar cfe dotcomgame.jar nl.javasteam.dotcomgame.DotComBust -C target\classes .
+
+This adds the Main-Class 'nl.javasteam.dotcomgame.DotComBust' to the generated META-INF\MANIFEST.MF file in the jar.
+
+You can run the jarfile with:
+> java -jar dotcomgame.jar
+
+Note that any class dependencies (Spring libraries etc.) the application has should either be contained within the jarfile, or should be provided separately and added to the classpath.
+
+Another way to generate an executable jarfile is to configure the maven-jar-plugin in the pom.xml to add the Main-Class:
+
+```
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+	<configuration>
+		<archive>
+			<manifestEntries>
+				<Main-Class>nl.javasteam.dotcomgame.DotComBust</Main-Class>
+			</manifestEntries>
+		</archive>
+	</configuration>
+</plugin>
+```
+
+Then just run 'mvn clean package' to generate the jarfile in the target directory.
+
+**Maven vs Eclipse**
+
+To set the correct (Maven) source directories and dependencies you have to run 'mvn eclipse:eclipse' in the project root and refresh the project in Eclipse (F5).
+
+**Unit testing**
+
+Black box testing: start with the requirements and test a class based on your expectations. Do not look inside the class you are testing. Advantage: you don't get distracted by implementation details and make sure the requirements are met.
+
+White box testing: look in the class under test and make sure you cover all cases. Advantage: you make sure you cover all the code that needs to be tested and also check for edge cases that might not be specified in the requirements (Exception handling for example).
+
+Both approaches are useful and should be used where applicable.
+
+A tool for aiding white box testing is EclEmma (or Cobertura is an alternative). The EclEmma Eclipse plugin allows you to 'coverage' a Java run or JUnit test run and shows all covered lines of code green, uncovered lines red, and partially covered lines yellow. It also generates a pane with a coverage report, giving insight in the code coverage percentage per project, package and class.
+
+'Mocking' is the creation of a test-version of a dependency. If a tested class uses a hardcoded dependency (like a database connection, or for instance System.in) then this is not possible. To make such a class testable, we refactor the hardcoded dependency into an instance field and add a setter for that field. The unit test can then set the mock dependency in the tested class before calling the tested method(s). Creating useful mock dependencies and refactoring the tested class can be quite a lot of work. There are frameworks that make this easier, for example JMock, EasyMock, Mockito to name a few. A very basic way to create a mock dependency is an anonymous inner class.
